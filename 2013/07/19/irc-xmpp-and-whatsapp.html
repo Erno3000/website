@@ -1,0 +1,498 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+
+    <meta name="description" content="Different communication methods, IRC, XMPP, and Whatsapp.">
+
+    
+
+    
+
+    <meta name="keywords" content=", smart home, smart homes, domotica, smart plug, home automation, power plug, gadgets, apple, open-source, raspberry pi, smart outlet, smart switch, arduino, alexa, amazon echo, nest, toon, philips hue, homewizard, fibaro, klik-aan-klik-uit, energy savings, comfort">
+    
+    <meta name="author" content="Crownstone B.V.">
+    <link rel="icon" type="image/x-icon" href="https://crownstone.rocks/images/favicon.ico?">
+    <link rel="apple-touch-icon" href="https://crownstone.rocks/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://crownstone.rocks/images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://crownstone.rocks/images/apple-touch-icon-114x114.png">
+
+    <meta name="theme-color" content="#ff8400">
+    <meta name="msapplication-navbutton-color" content="#ff8400">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#ff8400">
+
+    <meta http-equiv="Content-Language" content="en">
+<link rel="alternate" hreflang="en" href=" https://crownstone.rocks/2013/07/19/irc-xmpp-and-whatsapp"/>
+<link rel="alternate" hreflang="nl" href="https://crownstone.rocks/nl/2013/07/19/irc-xmpp-and-whatsapp"/>
+
+
+    <meta name="google-site-verification" content="qsSndPwnJ3H5zpj9z6ZvY-r4WnvSpMBe5QchxVbIWvw" />
+
+    
+    <title>Crownstone | IRC, XMPP and WhatsApp</title>
+    <!-- Bootstrap as framework -->
+    <link href="/assets/themes/flat/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/themes/flat/css/crownstone-global.css" rel="stylesheet"> 
+    <link href="/assets/themes/flat/css/elusive-icons.min.css" rel="stylesheet"> 
+	<!-- Open graph social card -->
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="IRC, XMPP and WhatsApp">
+	<meta property="og:url" content="https://crownstone.rocks/2013/07/19/irc-xmpp-and-whatsapp">
+	<meta property="og:image" content="https://crownstone.rocks/images/crownstone-social-card.jpg">
+	<meta property="og:image:secure_url" content="https://crownstone.rocks/images/crownstone-social-card.jpg">
+	<meta property="og:description" content="Different communication methods, IRC, XMPP, and Whatsapp.">
+	<meta property="og:site_name" content="Crownstone">
+	<!-- Open graph socal card for LinkedIn -->
+	<meta name="title" property="og:title" content="IRC, XMPP and WhatsApp">
+	<meta name="image" property="og:image" content="https://crownstone.rocks/images/crownstone-social-card.jpg">
+	<meta name="description" property="og:description" content="Different communication methods, IRC, XMPP, and Whatsapp.">
+	<!-- Twitter social card -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="IRC, XMPP and WhatsApp">
+	<meta name="twitter:description" content="Different communication methods, IRC, XMPP, and Whatsapp.">
+	<meta name="twitter:image" content="https://crownstone.rocks/images/crownstone-social-card.jpg">
+	<meta name="twitter:image:width" content="240">
+	<meta name="twitter:image:height" content="240">
+    <!-- 
+    <link href="/assets/themes/flat/css/elusive-webfont.css" rel="stylesheet"> 
+    -->
+    <!--[if lt IE 9]>
+        <script src="/assets/themes/flat/resources/respond/Respond.min.js"></script>
+    <![endif]-->
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <!--[if gt IE 9]>
+    <link href="./bootstrap/css/ie10-viewport-bug-workaround.css" rel="stylesheet"> 
+    <![endif]-->
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+    
+
+    
+    
+    
+</head>
+
+<body>
+
+   <nav class="navbar navbar-light navbar-expand-lg">
+      <div class="container navContainer">
+         <img class="navbar-brand topLogo xs img-responsive" src="/images/apple-touch-icon-114x114.png" alt="">
+         <div class="crownstoneText d-block d-lg-none">Crownstone</div>
+
+         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarContents" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+
+         <div class="collapse navbar-collapse" id="navbarContents">
+            <ul class="navbar-nav">
+                                                                                                             
+				<li class="nav-item inactive "><a href="/" class="nav-link">Home</a></li>
+				<li class="nav-item inactive "><a href="/technology-consumer/" class="nav-link">Tech</a></li>
+				<li class="nav-item inactive "><a href="/scenarios/" class="nav-link">Scenarios</a></li>
+				<li class="nav-item inactive "><a href="/blog/" class="nav-link">Blog</a></li>
+				<li class="nav-item inactive "><a href="/jobs/" class="nav-link">Jobs</a></li>
+				<li class="nav-item inactive "><a href="/team/" class="nav-link">Team</a></li>
+          	<li class="nav-item"><a href="/search/" class="nav-link active"><i class="el el-search"></i></a></li>
+                       
+
+            </ul>
+            <ul class="navbar-nav mr-right">
+               
+<li class="nav-item">
+	
+	
+	<!-- note the space before nav-url, without it polyglot will relativize it: https://github.com/untra/polyglot -->
+	<a style="font-weight: bold;" href=" https://crownstone.rocks/2013/07/19/irc-xmpp-and-whatsapp" class="nav-link">en</a>
+</li>
+
+<li class="nav-item">
+	
+	
+	<!-- note the space before nav-url, without it polyglot will relativize it: https://github.com/untra/polyglot -->
+	<a  href=" https://crownstone.rocks/nl/2013/07/19/irc-xmpp-and-whatsapp" class="nav-link">nl</a>
+</li>
+
+<li class="nav-item accent">
+	<a href="https://shop.crownstone.rocks?launch=en&ref=http://crownstone.rocks/en/2013/07/19/irc-xmpp-and-whatsapp" class="nav-link">
+		
+		Shop
+		
+		<i class="el el-shopping-cart"></i>
+	</a>
+</li>
+<li class="nav-item accent">
+	<a href="https://subscribe.crownstone.rocks/welcome?dest=smarthome&launch=en&ref=http://crownstone.rocks/en/2013/07/19/irc-xmpp-and-whatsapp" class="nav-link">
+		
+		Subscription
+		
+		<i class="el el-person"></i>
+	</a>
+</li>
+
+            </ul>
+         </div>
+      </div>
+   </nav>
+
+
+
+
+
+
+
+
+
+<div class="container">
+	<div class="row post-full">
+		<div class="col-md-12">
+			
+			<div class="date d-none d-lg-block">
+				<strong class="date_month">Jul</strong>
+				<strong class="date_day">19</strong>
+				<strong class="date_year">2013</strong>
+			</div>
+			
+			
+			<div class="author-block">
+				
+				<img src="https://secure.gravatar.com/avatar/d106002c1e7daa7c0e4fea564f9cb377?s=40">
+				
+				<span class="author">Bart van Vliet</span>
+			</div>
+			
+			<div class="post">
+				<div class="content">
+					
+<h1 id="header-irc-xmpp-and-whatsapp">IRC, XMPP and WhatsApp</h1>
+
+<h2 id="header-irc">IRC</h2>
+
+<p>IRC, short for Internet Relay Chat, is a protocol, created in 1988, for
+instant messaging. There are many IRC client programs and many networks to
+connect to, and most of the chat happens in channels (chat rooms), while
+private messages are also possible. The nice thing about IRC is that most
+servers are non commercial (w.r.t. privacy concerns), and requires very little
+traffic. Since channels have a name and topic, it’s easy to find a channel
+that meets your interests, while you can also create your own channel for
+friends. Channels have operators, who can manage a channel: kick or ban users,
+set modes and inviting other people. Many more handy commands are available
+for users, like setting yourself as being away or ignoring someone.</p>
+
+<p>There is quite some development done around IRC: networks improve their
+<a href="http://hg.quakenet.org">servers</a>, client programs are improved, BNCs (a proxy
+to an IRC server that remain connected to the server when you go offline) are
+getting more and more features. Next to that, many people create bots that are
+connected to IRC to make live easier: bots that can lookup information, create
+statistics, or control (game) servers.</p>
+
+<h2 id="header-whatsapp">WhatsApp</h2>
+
+<p>At some point, WhatsApp became popular, and I didn’t get why. It was just
+another way to message people and it uses a customized protocol, with poor
+<a href="http://en.wikipedia.org/wiki/Whatsapp#Security">security</a>. Furthermore: all
+traffic goes via a single, commercial, company, which often makes it tempting
+to sell users privacy (like Facebook and Google do).
+This made me think: why not replace WhatsApp with a nice app that uses IRC?
+The problem with IRC is that it isn’t very noob friendly: it is made by and
+for people who aren’t scared of computers, with many options, commands and
+modes. So the app would have to hide all this and show an easy interface for
+the user. I’ve been talking to IRC developers about this and there are a
+couple of problems: IRC server do not store messages your receive when you’re
+offline (you’d need a BNC for that) and sending something to a certain nick
+does not guarantee that this nick is actually the person you think it is.</p>
+
+<h2 id="header-xmpp">XMPP</h2>
+
+<p>Recently I’ve been reading myself into XMPP (for<a href="http://www.dodedodo.com">http://www.dodedodo.com</a>) and figured that this would
+is perfect for the app, and of course it turns out that WhatsApp simply uses a
+customized XMPP protocol. XMPP basically works like email: everyone can setup
+a server and users get an address (JID) in the form of:
+user@server.com/device. When you send a message to another user, the message
+goes via your server, to the other user’s server and ends up at the other
+user. Because XMPP always uses a login it does not have the same problem that
+IRC has. Furthermore, there is an XMPP standard
+<a href="http://xmpp.org/extensions/xep-0013.html">extension</a> that enables message
+storage when a user is offline, and retrieval by the user when he connects
+again.</p>
+
+<p>So I was looking for XMPP <a href="https://play.google.com/store/search?q=xmpp">apps</a>
+and it seems that most apps assume you already have an account, and don’t look
+very nice. I think that if there was an app that uses standard XMPP, it would
+be a very nice replacement of WhatsApp.</p>
+
+
+				</div>
+				
+				<div class="d-lg-none">
+					<div class="text-date">
+						<p>19 July 2013</p> 
+					</div>
+				</div>
+
+				
+	
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+
+				
+		</div>
+	</div>
+</div>
+
+<div class="container-fluid post-footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+					<ul class="pagination">
+						
+						<li class="page-item prev"><a class="page-link" href="/2013/07/12/introduction-to-one-class-support-vector" title="Introduction to One-Class Support Vector Machine">&larr; Previous</a></li>
+						
+						<li class="page-item"><a class="page-link" href="/blog">Archive</a></li>
+						
+						<li class="page-item next"><a class="page-link" href="/2014/03/05/rfduino-without-rfduino-code" title="RFduino without RFduino code">Next &rarr;</a></li>
+						
+					</ul>
+			</div>
+			<div class="col-md-6">
+
+					<div class="social-button-footer">
+						<p>
+						<a class="btn btn-social-icon btn-twitter" href="http://twitter.com/intent/tweet?url=https://crownstone.rocks/2013/07/19/irc-xmpp-and-whatsapp&text=IRC, XMPP and WhatsApp"><i class="el el-twitter"></i></a>
+						<a class="btn btn-social-icon btn-facebook" href="http://facebook.com/sharer.php?u=https://crownstone.rocks/2013/07/19/irc-xmpp-and-whatsapp"><i class="el el-facebook"></i></a>
+						<a class="btn btn-social-icon btn-googleplus" href="https://plus.google.com/share?url=https://crownstone.rocks/2013/07/19/irc-xmpp-and-whatsapp"><i class="el el-googleplus"></i></a>
+						<a class="btn btn-social-icon btn-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https://crownstone.rocks/2013/07/19/irc-xmpp-and-whatsapp"><i class="el el-linkedin"></i></a>
+						<a class="btn btn-social-icon btn-reddit" href="http://reddit.com/submit?url=https://crownstone.rocks/2013/07/19/irc-xmpp-and-whatsapp&title=IRC, XMPP and WhatsApp"><i class="el el-reddit"></i></a>
+						</p>
+					</div>
+
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+					
+
+
+  <div id="disqus_thread">
+	<div class="disqus_block">
+		<p>
+			<a href="#" onclick="disqus();return false;"><i class="el el-group"></i> Show Comments</a>
+		</p>
+		<p>
+			(not shown automatically to support your privacy)
+		</p>
+	</div>
+</div>
+
+<script type="text/javascript">
+	var disqus_shortname = 'crownstone'; 
+	var disqus_loaded = false;
+	// load disqus comments only on demand
+	function disqus() {
+
+	  if (!disqus_loaded)  {
+		var e = document.createElement("script");
+		e.type = "text/javascript";
+		e.async = true;
+		e.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+		(document.getElementsByTagName("head")[0] ||
+		 document.getElementsByTagName("body")[0])
+		.appendChild(e);
+	  }
+	}
+</script>
+
+
+
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+<div class="newsletter bottom">
+	<div class="wrapper">
+		<form action="//rocks.us10.list-manage.com/subscribe/post?u=d03baf337210e326a61dc14d5&id=a23d3e9ded" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
+			<label for="Email" class="newsletter__label hidden-label">Sign up to our mailing list</label>
+			<div class="input-group">
+				<input type="email" value="" placeholder="New things to learn and read!" name="EMAIL" id="Email" class="input-group-field newsletter__input" autocorrect="off" autocapitalize="off">
+				<span class="input-group-btn">
+					<button type="submit" class="btn newsletter__submit" name="subscribe" id="Subscribe">
+					<span class="newsletter__submit-text--large">I like!</span>
+					<span class="newsletter__submit-text--small">→</span>
+					</button>
+				</span>
+			</div>
+		</form>
+	</div>
+</div>
+
+
+
+<div class="footer">
+    <br />
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-10">
+                <div class="row">
+                    <div class="col-sm-4 text-center">
+                        <h3>Consumers</h3>
+                        <div style="display:inline-block;">
+                            <ul class="list-unstyled">
+                                
+      	    <li><a href="/" class="footer">Home</a></li>
+      	    <li><a href="/technology-consumer/" class="footer">Tech</a></li>
+      	    <li><a href="/blog/" class="footer">Blog</a></li>
+      	    <li><a href="/jobs/" class="footer">Jobs</a></li>
+      	    <li><a href="/team/" class="footer">Team</a></li>
+      	    <li><a href="/forum/" class="footer">Forum</a></li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 text-center">
+                        <h3>Business</h3>
+                        <div style="display:inline-block;">
+                            <ul class="list-unstyled">
+                                
+      	    <li><a href="/business/" class="footer">Use Cases</a></li>
+      	    <li><a href="/business/developers/" class="footer">Developers</a></li>
+      	    <li><a href="/business/data/" class="footer">Internet of Things</a></li>
+      	    <li><a href="/business/product-development/" class="footer">Product Development</a></li>
+      	    <li><a href="/infrastructure/" class="footer">Infrastructure</a></li>
+                                
+                            </ul>
+                        </div>
+                        <h3>News</h3>
+                        <div style="display:inline-block;">
+                            <ul class="list-unstyled">
+                                
+      	    <li><a href="/email-updates/" class="footer">Fun Newsletter!</a></li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 text-center">
+                        <h3>Order</h3>
+                        <div style="display:inline-block;">
+                            <ul class="list-unstyled text-left">
+                               <li>
+                                  <a class="footer" href="https://shop.crownstone.rocks?launch=en&ref=http://crownstone.rocks/en/2013/07/19/irc-xmpp-and-whatsapp">
+                                     <i class="el el-shopping-cart footer"></i>
+                                     
+                                     Webshop
+                                     
+                                  </a>
+                               </li>
+                            </ul>
+                        </div>
+                        <h3>Contact</h3>
+                        <div style="display:inline-block;">
+                            <ul class="list-unstyled text-left">
+                                <li>
+                                    <script type="text/javascript">/*<![CDATA[*/var a=new Array(".rocks", "stone", "crown", "@", "am", "te");document.write("<a href='mailto:");for(i=a.length-1;i>=0;i--){document.write(a[i])}document.write("?subject=Get in contact' class='footer'><i class='el el-envelope footer'></i>Email us!</a>");/*]]>*/</script>
+                                    <noscript><i class="el el-envelope footer"></i>Email team@...</noscript>
+                                </li>
+                                <li>
+                                    <a href="https://www.facebook.com/crownstones/" target="_blank" class="footer">
+                                        <i class="el el-facebook footer"></i>Facebook
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/CrownstoneRocks" target="_blank" class="footer">
+                                        <i class="el el-twitter footer"></i>Twitter
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com/channel/UCru1PX6P1JyhsI-OEMXnBdg" target="_blank" class="footer">
+                                        <i class="el el-youtube footer"></i>Youtube
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.linkedin.com/company/crownstone" target="_blank" class="footer">
+                                        <i class="el el-linkedin footer"></i>Linkedin
+                                    </a>
+                                </li>
+                                <li>
+                                   <a href="https://crownstone.rocks/privacy-policy" class="footer">
+                                        <i class="el el-ok footer"></i>Privacy
+                                    </a>
+                                </li>
+                                <li>
+                                   <a href="https://crownstone.rocks/presskit" class="footer">
+                                        <i class="el el-idea footer"></i>Press
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-1"></div>
+        </div>
+        <br/>
+        <div class="row">
+            <div class="col-sm-12 text-center colofon">
+               <div class="accent">Crownstone</div>
+               <p>Stationsplein 45 d1.118</p>
+               <p>3013 AK Rotterdam, The Netherlands</p>
+               <p>0031103073955 / 010-3073955</p>
+               <br/>
+               <p>
+               This site uses external services. Cookies for the tawk.to chat box (<a href="https://www.tawk.to/privacy-policy/">privacy policy</a>) and the shopify webshop (<a href="https://www.shopify.com/legal/cookies">cookie policy</a>).
+               </p>
+            </div>
+        </div>
+    </div>
+    <br />
+</div>
+
+
+<script async defer src="https://cdn.simpleanalytics.io/hello.js"></script>
+<noscript><img src="https://api.simpleanalytics.io/hello.gif" alt=""></noscript>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-17146802-16', 'auto');
+  ga('set', 'allowAdFeatures', false);
+  ga('send', 'pageview');
+</script>
+
+
+
+<!-- in debug mode, Google Chrome complains about .map files, do not worry -->                    
+<script type="text/javascript" src="/assets/themes/flat/resources/jquery/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="/assets/themes/flat/resources/bootstrap/js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<!--[if gt IE 9]>
+<script type="text/javascript" src="/assets/themes/flat/resources/bootstrap/js/ie10-viewport-bug-workaround.js"></script>
+<![endif]-->
+
+
+<!-- Disable tawk on blog because preferred way of communication is disqus for blog posts. -->
+
+
+</body>
+</html>
+

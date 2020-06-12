@@ -1,0 +1,573 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+
+    <meta name="description" content="Crownstones switch and dim devices and lamps based on your presence. Energy savings and home automation at once!">
+
+    
+
+    
+
+    <meta name="keywords" content="smart home, smart homes, domotica, smart plug, home automation, power plug, gadgets, apple, open-source, raspberry pi, smart outlet, smart switch, arduino, alexa, amazon echo, nest, toon, philips hue, homewizard, fibaro, klik-aan-klik-uit, energy savings, comfort">
+    
+    <meta name="author" content="Crownstone B.V.">
+    <link rel="icon" type="image/x-icon" href="https://crownstone.rocks/images/favicon.ico?">
+    <link rel="apple-touch-icon" href="https://crownstone.rocks/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://crownstone.rocks/images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://crownstone.rocks/images/apple-touch-icon-114x114.png">
+
+    <meta name="theme-color" content="#ff8400">
+    <meta name="msapplication-navbutton-color" content="#ff8400">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#ff8400">
+
+    <meta http-equiv="Content-Language" content="nl">
+<link rel="alternate" hreflang="en" href=" https://crownstone.rocks/installation/"/>
+<link rel="alternate" hreflang="nl" href="https://crownstone.rocks/nl/installation/"/>
+
+
+    <meta name="google-site-verification" content="qsSndPwnJ3H5zpj9z6ZvY-r4WnvSpMBe5QchxVbIWvw" />
+
+    
+    <title>Crownstone | Installatie</title>
+    <!-- Bootstrap as framework -->
+    <link href="/nl/assets/themes/flat/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/nl/assets/themes/flat/css/crownstone-global.css" rel="stylesheet"> 
+    <link href="/nl/assets/themes/flat/css/elusive-icons.min.css" rel="stylesheet"> 
+	<!-- Open graph social card -->
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Installatie">
+	<meta property="og:url" content="https://crownstone.rocks/installation/">
+	<meta property="og:image" content="https://crownstone.rocks/images/crownstone-social-card.jpg">
+	<meta property="og:image:secure_url" content="https://crownstone.rocks/images/crownstone-social-card.jpg">
+	<meta property="og:description" content="Crownstones switch and dim devices and lamps based on your presence. Energy savings and home automation at once!">
+	<meta property="og:site_name" content="Crownstone">
+	<!-- Open graph socal card for LinkedIn -->
+	<meta name="title" property="og:title" content="Installatie">
+	<meta name="image" property="og:image" content="https://crownstone.rocks/images/crownstone-social-card.jpg">
+	<meta name="description" property="og:description" content="Crownstones switch and dim devices and lamps based on your presence. Energy savings and home automation at once!">
+	<!-- Twitter social card -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Installatie">
+	<meta name="twitter:description" content="Crownstones switch and dim devices and lamps based on your presence. Energy savings and home automation at once!">
+	<meta name="twitter:image" content="https://crownstone.rocks/images/crownstone-social-card.jpg">
+	<meta name="twitter:image:width" content="240">
+	<meta name="twitter:image:height" content="240">
+    <!-- 
+    <link href="/nl/assets/themes/flat/css/elusive-webfont.css" rel="stylesheet"> 
+    -->
+    <!--[if lt IE 9]>
+        <script src="/assets/themes/flat/resources/respond/Respond.min.js"></script>
+    <![endif]-->
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <!--[if gt IE 9]>
+    <link href="./bootstrap/css/ie10-viewport-bug-workaround.css" rel="stylesheet"> 
+    <![endif]-->
+    <link href="/nl/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/nl/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+    
+
+    
+    
+    
+</head>
+
+<body>
+
+   <nav class="navbar navbar-light navbar-expand-lg">
+      <div class="container navContainer">
+         <img class="navbar-brand topLogo xs img-responsive" src="/images/apple-touch-icon-114x114.png" alt="">
+         <div class="crownstoneText d-block d-lg-none">Crownstone</div>
+
+         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarContents" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+
+         <div class="collapse navbar-collapse" id="navbarContents">
+            <ul class="navbar-nav">
+                                                                                                             
+				<li class="nav-item inactive "><a href="/nl/" class="nav-link">Welkom</a></li>
+				<li class="nav-item inactive "><a href="/nl/technology-consumer/" class="nav-link">Tech</a></li>
+				<li class="nav-item inactive "><a href="/nl/scenarios/" class="nav-link">Scenario's</a></li>
+				<li class="nav-item inactive "><a href="/nl/blog/" class="nav-link">Blog</a></li>
+				<li class="nav-item inactive "><a href="/nl/jobs/" class="nav-link">Banen</a></li>
+				<li class="nav-item inactive "><a href="/nl/team/" class="nav-link">Team</a></li>
+          	<li class="nav-item"><a href="/nl/search/" class="nav-link active"><i class="el el-search"></i></a></li>
+                       
+
+            </ul>
+            <ul class="navbar-nav mr-right">
+               
+<li class="nav-item">
+	
+	
+	<!-- note the space before nav-url, without it polyglot will relativize it: https://github.com/untra/polyglot -->
+	<a  href=" https://crownstone.rocks/installation/" class="nav-link">en</a>
+</li>
+
+<li class="nav-item">
+	
+	
+	<!-- note the space before nav-url, without it polyglot will relativize it: https://github.com/untra/polyglot -->
+	<a style="font-weight: bold;" href=" https://crownstone.rocks/nl/installation/" class="nav-link">nl</a>
+</li>
+
+<li class="nav-item accent">
+	<a href="https://shop.crownstone.rocks?launch=nl&ref=http://crownstone.rocks/nl/installation/" class="nav-link">
+		
+		Winkel
+		
+		<i class="el el-shopping-cart"></i>
+	</a>
+</li>
+<li class="nav-item accent">
+	<a href="https://subscribe.crownstone.rocks/welcome?dest=smarthome&launch=nl&ref=http://crownstone.rocks/nl/installation/" class="nav-link">
+		
+		Abonnement
+		
+		<i class="el el-person"></i>
+	</a>
+</li>
+
+            </ul>
+         </div>
+      </div>
+   </nav>
+
+
+
+
+
+
+<!-- markdown wrapper -->
+<div class="container">
+<div class="row">
+<div class="col">
+<!-- markdown wrapper -->
+
+
+
+
+
+<h1 id="header-crownstone-app-installatie">Crownstone app installatie</h1>
+
+<p>Om de Crownstone te gebruiken en te configureren heb je de <a href="https://crownstone.rocks/nl/app/">Crownstone app</a> nodig.
+Deze smartphone app is geschikt voor iOS en Adroid.
+Voor iOS is het <a href="https://apps.apple.com/us/app/crownstone/id1136616106">beschikbaar</a> in de Apple App Store, en voor
+Android can het worden <a href="https://play.google.com/store/apps/details?id=rocks.crownstone.consumerapp">gevonden</a> in de Google Play Store.</p>
+
+<p>De app zal je door het registratieproces heenleiden en maakt het mogelijk de Crownstones in te stellen.</p>
+
+<p>Voor gedetailleerde foto’s wat betreft de installatie achter stopcontacten, zie ook de instructies voor 
+<a href="https://crownstone.rocks/nl/installation/single-outlet">enkele stopcontacten</a> en
+<a href="https://crownstone.rocks/nl/installation/double-outlet">dubbele stopcontacten</a>.</p>
+
+<h1 id="header-installatie-achter-een-dimmer">Installatie achter een dimmer</h1>
+
+<p>Installeer de Crownstone <strong>niet</strong> tussen een fysieke dimmer en een lichtpunt. Dit stoort de voeding van de 
+Crownstone zelf. Het zal de Crownstone dimmen in plaats van he licht en dat is niet de bedoeling.
+Installatie met een dimmer wordt <strong>niet</strong> ondersteund en kan de levensduur van het product sterk verkorten.</p>
+
+<p>Installeer de Crownstones evenmin tussen het lichtnet en de fysieke dimmer. Het is geen fijne gebruikerservaring.</p>
+
+<p>Je kan de Crownstones installeren bij een licht dat wordt aangestuurd vanuit een normale schakelaar (zie onderaan de
+pagina). Je kan het licht dan dimmen met de Crownstone app of met apparaten van derden zoals de Amazon Alexa. Het
+gebruik van de schakelaar wisselt dan tussen de stand “uit” en de laatste “dimstand”.</p>
+
+<h1 id="header-installatie-achter-een-stopcontact">Installatie achter een stopcontact.</h1>
+
+<p>Als u niet zeker weet wat u moet doen, stop direct de installatie en neem contact op met een erkend elektricien.</p>
+
+<ol>
+  <li>Zet de stroom uit in de meterkast voor het installeren van de inbouw Crownstones.</li>
+  <li>Maak het stopcontact open en verbind de draden zoals getekend in onderstaand schakelschema in Figuur A.</li>
+  <li>Maak het stopcontact weer dicht en zet de stroom weer aan in de meterkast.</li>
+  <li>Open de app en plaats uw smartphone dicht bij het stopcontact met de Crownstone. Volg de instructies in de app voor het toevoegen van een nieuwe
+Crownstone.</li>
+</ol>
+
+<p>Als bovenstaande iets te snel gaat, er is een heel gedetailleerde stap-voor-stap-handleiding met foto’s 
+voor <a href="/nl/installation/single-outlet">enkele</a>
+en <a href="/nl/installation/double-outlet">dubbele</a> stopcontacten.</p>
+
+<figure class="image">
+  <img src="/attachments/installation/nl/socket_wiring_diagram.png" alt="Figuur A: Inbouw Crownstone schakelschema. Pas op, de draadkleuren kunnen anders zijn." />
+  <figcaption>Figuur A: Inbouw Crownstone schakelschema. Pas op, de draadkleuren kunnen anders zijn.</figcaption>
+</figure>
+
+<p>Hier komen wat algemene tips. Natuurlijk, let goed op de poorten op de Crownstone zelf. Sluit de draden goed aan. 
+Wissel niet per ongeluk in en uit om. Als deze worden omgedraaid, kan het zo zijn dat de Crownstone wel opstart, maar
+dan is het niet mogelijk om iets te schakelen. Strip en buig de bedrading vooraf. Alleen daarna sluit je de Crownstone
+aan en stop je ‘m in de inbouwdoos. Het voorbuigen van de draden verminderd ook de belasting op de poorten van de 
+Crownstone. Wees er ook zeker van dat de draden kloppen! Ga er niet vanuit dat de kleuren “correct” zijn. In de loop
+van de geschiedenis zijn draadkleuren meerdere keren veranderd en ze zijn nog steeds anders afhankelijk van het land.</p>
+
+<h1 id="header-installatie-bij-plafondverlichting">Installatie bij plafondverlichting</h1>
+
+<p>Als u niet zeker weet wat u moet doen, stop direct de installatie en neem contact op met een erkend elektricien.</p>
+
+<ol>
+  <li>Zet de stroom uit in de meterkast voor het installeren van de inbouw Crownstones.</li>
+  <li>De Crownstone wordt aangebracht bij de plafondlamp, niet bij de wandschakelaar (Figuur B). Verwijder de plafondverlichting en verbind de draden zoals
+getekend in onderstaand schakelschema (Figuur C).</li>
+  <li>Indien het gewenst is om de bestaande schakelaar te gebruiken tegelijkertijd met de Crownstone, zie de Switchcraft installatie instructies hieronder. Na
+installatie van de Crownstone, plaats de plafondlamp terug en zet de stroom weer aan in de meterkast.</li>
+  <li>Open de app en plaats uw smartphone dicht bij de lamp met de zojuist geïnstalleerde Crownstone. Volg de instructies in de app voor het toevoegen
+van een nieuwe Crownstone.</li>
+</ol>
+
+<figure class="image">
+  <img src="/attachments/installation/nl/ceiling_light_placement.png" alt="Figuur B: De Crownstone wordt geplaatst in het plafond." />
+  <figcaption>Figuur B: De Crownstone wordt geplaatst in het plafond.</figcaption>
+</figure>
+
+<figure class="image">
+  <img src="/attachments/installation/nl/ceiling_light_wiring_diagram.png" alt="Figuur C: Inbouw Crownstone schakelschema. Pas op, de draadkleuren kunnen anders zijn. Aarde kan mogelijk afwezig zijn." />
+  <figcaption>Figuur C: Inbouw Crownstone schakelschema. Pas op, de draadkleuren kunnen anders zijn. Aarde kan mogelijk afwezig zijn.</figcaption>
+</figure>
+
+<h1 id="header-switchcraft-installation">Switchcraft installation</h1>
+
+<p>Als u niet zeker weet wat u moet doen, stop direct de installatie en neem contact op met een erkend elektricien.</p>
+
+<p>Switchcraft is een aanpassing van een wandschakelaar zodat deze samen met
+een Crownstone kan worden gebruikt. Elke wandschakelaar die ingezet kan
+worden in een normale hotelschakeling kan worden gebruikt voor Switchcraft.
+Deze instructies veronderstellen dat de Crownstone al is geïnstalleerd volgens de
+“Installatie bij plafondverlichting” instructie hierboven.</p>
+
+<ol>
+  <li>Zet de stroom uit in de meterkast voordat u de wandschakelaar gaat aanpassen.</li>
+  <li>Switchcraft werkt door middel van het aanbrengen van een extra draad tussen de twee uitgangen van de schakelaar (getoond in schakelschema (Figuur D) met [X]). Als de schakelaar wordt omgezet, wordt de stroom kort onderbroken. De Crownstone ziet dit als een schakelcommando. Maak de wandschakelaar open en verbind de draden zoals getekend in onderstaand schakelschema (Figuur D).</li>
+  <li>Plaats de wandschakelaar terug en zet de stroom weer aan in de meterkast.</li>
+  <li>Open de app en zoek de Crownstone die nu via Switchcraft kan worden bediend. Deze functie moet in de instellingen van een Crownstone worden aangezet voordat deze zal reageren.</li>
+</ol>
+
+<figure class="image">
+  <img src="/attachments/installation/nl/switchcraft_wiring_diagram.png" alt="Figuur D: Switchcraft schakelschema. Aanpassing van de bedrading aangegeven
+met [X]." />
+  <figcaption>Figuur D: Switchcraft schakelschema. Aanpassing van de bedrading aangegeven
+met [X].</figcaption>
+</figure>
+
+<p>In plaats van de bestaande schakelaar wijzigen, is het ook mogelijk om een “pulsschakelaar” te kopen of te
+gebruiken. Let er op dat dit een schakelaar is met een breek-contact (of verbreek-contact), dus <strong>niet</strong> een maak-contact.
+Als de knop niet wordt ingedrukt stroomt de electriciteit vrij door het circuit. Wanneer de knop is ingedrukt, stopt
+de stroom. De Crownstone kan deze interruptie detecteren en de toestand veranderen (schakelen tussen aan en uit).</p>
+
+<p>Het is mogelijk om heel veel van deze pulsschakelaars in serie te zetten voor dezelfde lichten. Dit biedt soms 
+voordelen ten opzichte van een traditionele hotelschakeling.</p>
+
+<h2 id="header-lichten-dimmen-met-crownstone">Lichten dimmen met Crownstone</h2>
+
+<p>De Crownstone kan of hoge stromen schakelen of lichten dimmen. Om de
+dimmer functionaliteit te gebruiken moet je deze eerst aanzetten. Volg deze
+stappen:</p>
+
+<ul>
+  <li>Controleer of de lampen dimbaar zijn.</li>
+  <li>Download de Crownstone app, registreer en voeg je Crownstone toe.</li>
+  <li>Zet dimmen aan in de instellingen van de Crownstone.</li>
+</ul>
+
+<p>U kunt lichten dimmen tussen de 0 en 100 W met een enkele Crownstone.</p>
+
+<p>Meer informatie over dimcompatibiliteit kan worden gevonden op <a href="https://crownstone.rocks/nl/compatibility/dimming/">https://crownstone.rocks/compatibility/dimming/</a>.</p>
+
+<p>Voor overige vragen en hulp met betrekking op de app kunt u terecht op <a href="https://crownstone.rocks/nl/app-help">https://crownstone.rocks/app-help</a>.</p>
+
+
+
+
+
+
+<!-- markdown wrapper -->
+</div><!-- container -->
+</div><!-- row -->
+</div><!-- col -->
+<!-- markdown wrapper -->
+
+
+
+<div class="newsletter bottom">
+	<div class="wrapper">
+		<form action="//rocks.us10.list-manage.com/subscribe/post?u=d03baf337210e326a61dc14d5&id=a23d3e9ded" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
+			<label for="Email" class="newsletter__label hidden-label">Sign up to our mailing list</label>
+			<div class="input-group">
+				<input type="email" value="" placeholder="New things to learn and read!" name="EMAIL" id="Email" class="input-group-field newsletter__input" autocorrect="off" autocapitalize="off">
+				<span class="input-group-btn">
+					<button type="submit" class="btn newsletter__submit" name="subscribe" id="Subscribe">
+					<span class="newsletter__submit-text--large">I like!</span>
+					<span class="newsletter__submit-text--small">→</span>
+					</button>
+				</span>
+			</div>
+		</form>
+	</div>
+</div>
+
+
+
+<div class="footer">
+    <br />
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-10">
+                <div class="row">
+                    <div class="col-sm-4 text-center">
+                        <h3>Consumers</h3>
+                        <div style="display:inline-block;">
+                            <ul class="list-unstyled">
+                                
+      	    <li><a href="/nl/" class="footer">Welkom</a></li>
+      	    <li><a href="/nl/technology-consumer/" class="footer">Tech</a></li>
+      	    <li><a href="/nl/blog/" class="footer">Blog</a></li>
+      	    <li><a href="/nl/jobs/" class="footer">Banen</a></li>
+      	    <li><a href="/nl/team/" class="footer">Team</a></li>
+      	    <li><a href="/nl/forum/" class="footer">Forum</a></li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 text-center">
+                        <h3>Business</h3>
+                        <div style="display:inline-block;">
+                            <ul class="list-unstyled">
+                                
+      	    <li><a href="/nl/business/" class="footer">Use Cases</a></li>
+      	    <li><a href="/nl/business/developers/" class="footer">Developers</a></li>
+      	    <li><a href="/nl/business/data/" class="footer">Internet of Things</a></li>
+      	    <li><a href="/nl/business/product-development/" class="footer">Product Development</a></li>
+      	    <li><a href="/nl/infrastructure/" class="footer">Infrastructure</a></li>
+                                
+                            </ul>
+                        </div>
+                        <h3>News</h3>
+                        <div style="display:inline-block;">
+                            <ul class="list-unstyled">
+                                
+      	    <li><a href="/nl/email-updates/" class="footer">Fun Newsletter!</a></li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 text-center">
+                        <h3>Order</h3>
+                        <div style="display:inline-block;">
+                            <ul class="list-unstyled text-left">
+                               <li>
+                                  <a class="footer" href="https://shop.crownstone.rocks?launch=nl&ref=http://crownstone.rocks/nl/installation/">
+                                     <i class="el el-shopping-cart footer"></i>
+                                     
+                                     Webwinkel
+                                     
+                                  </a>
+                               </li>
+                            </ul>
+                        </div>
+                        <h3>Contact</h3>
+                        <div style="display:inline-block;">
+                            <ul class="list-unstyled text-left">
+                                <li>
+                                    <script type="text/javascript">/*<![CDATA[*/var a=new Array(".rocks", "stone", "crown", "@", "am", "te");document.write("<a href='mailto:");for(i=a.length-1;i>=0;i--){document.write(a[i])}document.write("?subject=Get in contact' class='footer'><i class='el el-envelope footer'></i>Email us!</a>");/*]]>*/</script>
+                                    <noscript><i class="el el-envelope footer"></i>Email team@...</noscript>
+                                </li>
+                                <li>
+                                    <a href="https://www.facebook.com/crownstones/" target="_blank" class="footer">
+                                        <i class="el el-facebook footer"></i>Facebook
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/CrownstoneRocks" target="_blank" class="footer">
+                                        <i class="el el-twitter footer"></i>Twitter
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com/channel/UCru1PX6P1JyhsI-OEMXnBdg" target="_blank" class="footer">
+                                        <i class="el el-youtube footer"></i>Youtube
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.linkedin.com/company/crownstone" target="_blank" class="footer">
+                                        <i class="el el-linkedin footer"></i>Linkedin
+                                    </a>
+                                </li>
+                                <li>
+                                   <a href="https://crownstone.rocks/nl/privacy-policy" class="footer">
+                                        <i class="el el-ok footer"></i>Privacy
+                                    </a>
+                                </li>
+                                <li>
+                                   <a href="https://crownstone.rocks/nl/presskit" class="footer">
+                                        <i class="el el-idea footer"></i>Press
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-1"></div>
+        </div>
+        <br/>
+        <div class="row">
+            <div class="col-sm-12 text-center colofon">
+               <div class="accent">Crownstone</div>
+               <p>Stationsplein 45 d1.118</p>
+               <p>3013 AK Rotterdam, The Netherlands</p>
+               <p>0031103073955 / 010-3073955</p>
+               <br/>
+               <p>
+               This site uses external services. Cookies for the tawk.to chat box (<a href="https://www.tawk.to/privacy-policy/">privacy policy</a>) and the shopify webshop (<a href="https://www.shopify.com/legal/cookies">cookie policy</a>).
+               </p>
+            </div>
+        </div>
+    </div>
+    <br />
+</div>
+
+
+<script async defer src="https://cdn.simpleanalytics.io/hello.js"></script>
+<noscript><img src="https://api.simpleanalytics.io/hello.gif" alt=""></noscript>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-17146802-16', 'auto');
+  ga('set', 'allowAdFeatures', false);
+  ga('send', 'pageview');
+</script>
+
+
+
+<!-- in debug mode, Google Chrome complains about .map files, do not worry -->                    
+<script type="text/javascript" src="/assets/themes/flat/resources/jquery/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="/assets/themes/flat/resources/bootstrap/js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<!--[if gt IE 9]>
+<script type="text/javascript" src="/assets/themes/flat/resources/bootstrap/js/ie10-viewport-bug-workaround.js"></script>
+<![endif]-->
+
+
+<!-- Disable tawk on blog because preferred way of communication is disqus for blog posts. -->
+
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+   var tawk_loaded = false;
+
+   // when loading on demand, people have to click twice, after loading the iframe, click automatically
+   var tawk_autoclick = true;
+
+   // load tawk chat window only on demand
+   function load_tawk() {
+      if (!tawk_loaded) {
+         
+         document.getElementById("tawk-no-tracking-large").style.display = "none";
+         document.getElementById("tawk-no-tracking-small").style.display = "none";
+
+         var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+         (function(){
+            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+            s1.async=true;
+            s1.src='https://embed.tawk.to/565d82718c0c22d759259aee/default';
+            s1.charset='UTF-8';
+            s1.setAttribute('crossorigin','*');
+            s0.parentNode.insertBefore(s1,s0);
+            console.log("Embed tawk script");
+            if (tawk_autoclick == false) {
+               return;
+            }
+
+            setTimeout(
+               function() {
+                  var chat_widgets = document.querySelectorAll('[title="chat widget"]');
+                  var i;
+                  for (i = 0; i < chat_widgets.length; ++i) {
+                     var chat_frame = chat_widgets[i];
+                     console.log("widget", chat_frame);
+                     var box = chat_frame.contentDocument.getElementById("tawkchat-minified-box");
+                     if (box) {
+                        console.log("Touch minified box", box);
+                        var event = new Event('touchstart');
+                        box.dispatchEvent(event);
+                        event = new Event('touchend');
+                        box.dispatchEvent(event);
+                        return;
+                     }
+                     var wrapper = chat_frame.contentDocument.getElementById("tawkchat-minified-wrapper");
+                     if (wrapper) {
+                        console.log("Click minified wrapper", wrapper);
+                        wrapper.click();
+                        return;
+                     }
+                  }
+                  console.log("Done");
+               }, 1000);
+
+         })();
+
+         Tawk_API.onLoad = function(){
+            tawk_loaded = true;
+
+            console.log("Loaded tawk widget (only now)");
+            var pageStatus = Tawk_API.getStatus();
+
+            if (pageStatus === 'away') {
+               var s2 = document.getElementById("short-message");
+               s2.value = "Not there! Email us please!";
+            }
+
+            Tawk_API.maximize();
+         };         
+         
+      }
+   }
+</script>
+<!--End of Tawk.to Script-->
+
+<!-- Dummy block for lazy loading of Tawk.to script -->
+<div class="d-none d-sm-block">
+   <div class="tawk-dummy" id="tawk-no-tracking-large">
+      <div id="tawkchat-minified-wrapper" class="white ltr-direction">
+         <div id="tawkchat-minified-container" class="theme-background-color" style="border-radius: 8px 8px 0px 0px;">
+            <div id="tawkchat-status-middle">
+               <div id="tawkchat-status-text-container" class="theme-text-color">
+                  <div id="tawkchat-status-message">
+                     <span id="short-message" onclick="load_tawk();return false;">Chat with a human! :-) No bots!</span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+<div class="d-block d-sm-none"> 
+   <div class="tawk-dummy-small bottom round" id="tawk-no-tracking-small">
+      <div id="tawkchat-minified-box" style="transform: scale(1); transform-origin: left bottom 0px;">
+         <div id="tawkchat-minified-wrapper">
+            <div id="tawkchat-status-text-container" class="theme-background-color theme-text-color" onclick="load_tawk(); return false;">
+               <div id="tawkchat-status-icon" class="online">
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+
+
+</body>
+</html>
+

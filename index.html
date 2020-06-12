@@ -1,0 +1,630 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+
+    <meta name="description" content="Crownstones switch and dim devices and lamps based on your presence. Energy savings and home automation at once!">
+
+    
+
+    
+
+    <meta name="keywords" content="smart home, smart plug, switch, dimmer, power monitor, bluetooth, ble, bluetooth low energy, indoor positioning, smart home, smart homes, domotica, smart plug, home automation, power plug, gadgets, apple, open-source, raspberry pi, smart outlet, smart switch, arduino, alexa, amazon echo, nest, toon, philips hue, homewizard, fibaro, klik-aan-klik-uit, energy savings, comfort">
+    
+    <meta name="author" content="Crownstone B.V.">
+    <link rel="icon" type="image/x-icon" href="https://crownstone.rocks/images/favicon.ico?">
+    <link rel="apple-touch-icon" href="https://crownstone.rocks/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://crownstone.rocks/images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://crownstone.rocks/images/apple-touch-icon-114x114.png">
+
+    <meta name="theme-color" content="#ff8400">
+    <meta name="msapplication-navbutton-color" content="#ff8400">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#ff8400">
+
+    <meta http-equiv="Content-Language" content="en">
+<link rel="alternate" hreflang="en" href=" https://crownstone.rocks/"/>
+<link rel="alternate" hreflang="nl" href="https://crownstone.rocks/nl/"/>
+
+
+    <meta name="google-site-verification" content="qsSndPwnJ3H5zpj9z6ZvY-r4WnvSpMBe5QchxVbIWvw" />
+
+    
+    <title>Crownstone</title>
+    <!-- Bootstrap as framework -->
+    <link href="/assets/themes/flat/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/themes/flat/css/crownstone-global.css" rel="stylesheet"> 
+    <link href="/assets/themes/flat/css/elusive-icons.min.css" rel="stylesheet"> 
+	<!-- Open graph social card -->
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Home">
+	<meta property="og:url" content="https://crownstone.rocks/">
+	<meta property="og:image" content="https://crownstone.rocks/images/crownstone-social-card.jpg">
+	<meta property="og:image:secure_url" content="https://crownstone.rocks/images/crownstone-social-card.jpg">
+	<meta property="og:description" content="Crownstones switch and dim devices and lamps based on your presence. Energy savings and home automation at once!">
+	<meta property="og:site_name" content="Crownstone">
+	<!-- Open graph socal card for LinkedIn -->
+	<meta name="title" property="og:title" content="Home">
+	<meta name="image" property="og:image" content="https://crownstone.rocks/images/crownstone-social-card.jpg">
+	<meta name="description" property="og:description" content="Crownstones switch and dim devices and lamps based on your presence. Energy savings and home automation at once!">
+	<!-- Twitter social card -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Home">
+	<meta name="twitter:description" content="Crownstones switch and dim devices and lamps based on your presence. Energy savings and home automation at once!">
+	<meta name="twitter:image" content="https://crownstone.rocks/images/crownstone-social-card.jpg">
+	<meta name="twitter:image:width" content="240">
+	<meta name="twitter:image:height" content="240">
+    <!-- 
+    <link href="/assets/themes/flat/css/elusive-webfont.css" rel="stylesheet"> 
+    -->
+    <!--[if lt IE 9]>
+        <script src="/assets/themes/flat/resources/respond/Respond.min.js"></script>
+    <![endif]-->
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <!--[if gt IE 9]>
+    <link href="./bootstrap/css/ie10-viewport-bug-workaround.css" rel="stylesheet"> 
+    <![endif]-->
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+    
+
+    
+    <script>
+        // set the appropriate background image
+        BACKGROUND_CLASS = 'introBackground';
+    </script>
+    
+    
+</head>
+
+<body>
+
+   <nav class="navbar navbar-light navbar-expand-lg">
+      <div class="container navContainer">
+         <img class="navbar-brand topLogo xs img-responsive" src="/images/apple-touch-icon-114x114.png" alt="">
+         <div class="crownstoneText d-block d-lg-none">Crownstone</div>
+
+         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarContents" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+
+         <div class="collapse navbar-collapse" id="navbarContents">
+            <ul class="navbar-nav">
+                                                                                                             
+				<li class="nav-item active"><a href="/" class="nav-link active">Home</a></li>
+				<li class="nav-item inactive "><a href="/technology-consumer/" class="nav-link">Tech</a></li>
+				<li class="nav-item inactive "><a href="/scenarios/" class="nav-link">Scenarios</a></li>
+				<li class="nav-item inactive "><a href="/blog/" class="nav-link">Blog</a></li>
+				<li class="nav-item inactive "><a href="/jobs/" class="nav-link">Jobs</a></li>
+				<li class="nav-item inactive "><a href="/team/" class="nav-link">Team</a></li>
+          	<li class="nav-item"><a href="/search/" class="nav-link active"><i class="el el-search"></i></a></li>
+                       
+
+            </ul>
+            <ul class="navbar-nav mr-right">
+               
+<li class="nav-item">
+	
+	
+	<!-- note the space before nav-url, without it polyglot will relativize it: https://github.com/untra/polyglot -->
+	<a style="font-weight: bold;" href=" https://crownstone.rocks/" class="nav-link">en</a>
+</li>
+
+<li class="nav-item">
+	
+	
+	<!-- note the space before nav-url, without it polyglot will relativize it: https://github.com/untra/polyglot -->
+	<a  href=" https://crownstone.rocks/nl/" class="nav-link">nl</a>
+</li>
+
+<li class="nav-item accent">
+	<a href="https://shop.crownstone.rocks?launch=en&ref=http://crownstone.rocks/en/" class="nav-link">
+		
+		Shop
+		
+		<i class="el el-shopping-cart"></i>
+	</a>
+</li>
+<li class="nav-item accent">
+	<a href="https://subscribe.crownstone.rocks/welcome?dest=smarthome&launch=en&ref=http://crownstone.rocks/en/" class="nav-link">
+		
+		Subscription
+		
+		<i class="el el-person"></i>
+	</a>
+</li>
+
+            </ul>
+         </div>
+      </div>
+   </nav>
+
+
+
+
+
+
+
+
+
+
+<div class="container-fluid"> 
+<div class="row">
+<div class="text-bar">
+New: <a href="https://subscribe.crownstone.rocks?ref=crownstone.rocks&amp;loc=banner">Subscriptions</a>! Our <a href="https://shop.crownstone.rocks">shop</a> deliveries are sent weekly.
+</div>
+</div>
+</div>
+
+<!-- ffprobe -v error -select_streams v:0 -show_entries stream=profile,level -of default=noprint_wrappers=1  clips/intro.mp4 -->
+<!-- shows for video level=40 (0x28) and profile=High (0x6400) -->
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12 p-0">
+			<div class="videoBanner d-none d-lg-block">
+				<video id="video" width="100%" muted="" autoplay="" loop="">
+					<source src="/clips/intro.webm" type="video/webm" />
+					<source src="/clips/intro.mp4" type="video/mp4; codecs=&quot;avc1.640028&quot;" />
+					Your browser doesn't support the video tag.
+				</video>
+				<div class="logoOverlay">
+				</div>
+			</div> 
+			<div class="d-lg-none">
+				<img class="img-responsive center-block" src="/attachments/crownstone_in_living_room.jpg" alt="Crownstone in a living room" />
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+
+
+<div class="row ">
+
+
+
+<div class="col-xs-12 col-sm-12 col-md-12">
+
+      <h1 id="header-automatically-turn-on-the-lights">Automatically turn on the lights!</h1>
+
+      <p>Crownstones use the position of your smartphone through measuring Bluetooth Low Energy signals (see the <a href="/technology-consumer">Technology page</a>. Crownstones can immediately act upon your presence because they are integrated in a power outlet or power plug. It switches on the light when your in the living room automatically (after dark, of course). To summarize, they can do anything a current smart plug does and more!</p>
+
+      <p>A Crownstone is a switch, a dimmer, a presence detector, and a power monitor, all in one. Moreover, it uses AI and is open-source. This means that its functionality improves over time and that its functions can be extended by many software developers.</p>
+
+    </div><!-- col -->
+
+
+</div><!-- row -->
+
+</div>
+<!-- container -->
+
+<div class="container">
+	<div class="row text-center marginTopM">
+		<div class="col-md-2 col-sm-2 col-xs-2"><img class="img-responsive center-block" src="/images/icons/switch.png" alt="Crownstone switch icon" />
+			
+			<p>Switch</p>
+			
+		</div>
+		<div class="col-md-2 col-sm-2 col-xs-2"><img class="img-responsive center-block" src="/images/icons/dimming.png" alt="Crownstone dimming icon" />
+			<p>Dimmer</p>
+		</div>
+		<div class="col-md-2 col-sm-2 col-xs-2"><img class="img-responsive center-block" src="/images/icons/localization.png" alt="Crownstone localization icon" />
+			
+			<p>Presence Detector</p>
+			
+		</div>
+		<div class="col-md-2 col-sm-2 col-xs-2"><img class="img-responsive center-block" src="/images/icons/measuring.png" alt="Crownstone power monitor icon" />
+			
+			<p>Power Monitor</p>
+			
+		</div>
+		<div class="col-md-2 col-sm-2 col-xs-2"><img class="img-responsive center-block" src="/images/icons/ai.png" alt="Crownstone AI icon" />
+			
+			<p>AI</p>
+			
+		</div>
+		<div class="col-md-2 col-sm-2 col-xs-2"><img class="img-responsive center-block" src="/images/icons/crownstone.png" alt="Crownstone open platform icon" />
+			
+			<p>Open Source</p>
+			
+		</div>
+	</div>
+</div>
+
+<div class="container">
+
+
+<div class="row ">
+
+
+
+<div class="col-xs-12 col-sm-12 col-md-12">
+
+      <h1 id="header-indoor-positioning">Indoor positioning</h1>
+
+      <p>Crownstone’s secret sauce is <b>indoor positioning</b>. The Crownstones know where you are if you carry a smart device with you. This can be a phone, a fitness wrist band, or a key tag. There is no more need to (1) get your phone, (2) unlock it, (3) open an app, (4) navigate to the right screen, and (5) tap some button! Your smart home will automatically react to you entering a room!</p>
+
+      <p>It turns on the lights for you when you enter with your hands full of groceries and two little kids. It switches off energy-hungry devices automatically without you having to think of it! It turns off an electric device if you forget! It wakes you up by switching on the lights in the bedroom. It makes sure your little kid cannot use the microwave or drill if you’re not there! Finally! Now, because your home knows where you are, it can become smart for the first time in history!</p>
+
+    </div><!-- col -->
+
+
+</div><!-- row -->
+
+</div>
+<!-- container -->
+
+<div class="container">
+
+
+<div class="row ">
+
+
+
+<div class="col-xs-12 col-sm-12 col-md-12">
+
+      <p><img src="/images/plugs_in_room.jpg" alt="Crownstone in a nice home" style="width: 100%" /></p>
+
+      <h1 id="header-crownstone-plug">Crownstone Plug</h1>
+
+      <p>The Crownstone plug (<a href="https://shop.crownstone.rocks/products/ready-to-go-kit-with-two-plug-in-crownstones">shop</a>) is plug-and-play! Just download the Crownstone app and any device that you plug into it can react to your presence. Use the Crownstone plug behind the Horizon television box if you want to save <abbr title="38W * 20 hour * 365 days * 22 cent/kWh = € 61 per year">€ 61 per year</abbr> (see <a href="https://radar.avrotros.nl/forum/viewtopic.php?t=163063">38 Watt in stand-by</a>). Plus, it won’t be so slow when starting up from stand-by anymore! Or put a few of them behind your lights in the living room if you’re tired of doing the rounds flipping ten switches each night! Or put one wherever your kids are always forgetting to switch off the light!</p>
+
+      <h2 id="header-crownstone-is-social-hardware-send-a-sweet-message">Crownstone is social hardware: send a sweet message!</h2>
+
+      <p>If you have four or more Crownstones they can start to pinpoint your location per room. Crownstones are self-learning. You walk a few rounds in the living room and then tell them that this is the living room. You do the same in the kitchen and the Crownstone AI learns automatically that that is the kitchen!</p>
+
+      <p>You can also send messages to a specific location, pretty cool! 
+Think of a sweet message to your loved one, e.g. “@mylove #kitchen I cooked you something tasty. Check the fridge!” 
+or “@mylove <i class="el el-heart-empty"></i> #livingroom There is a great show on channel 4!” 
+or “@mylove #bathroom Light a match, lol!”</p>
+
+    </div><!-- col -->
+
+
+</div><!-- row -->
+
+</div>
+<!-- container -->
+
+<hr class="featurette-divider" />
+
+<div class="container container-bottom-margin">
+
+
+<div class="row ">
+
+
+
+<div class="col-xs-12 col-sm-12 col-md-12">
+
+      <p><img src="/images/builtins-on-box.jpg" alt="Builtin Crownstones in their packaging" style="width: 100%" /></p>
+
+      <h1 id="header-built-in-crownstone">Built-in Crownstone</h1>
+
+      <p>If you are renovating your home or if you like to to have your home smart without having plugs in each power outlet, you can do this as well! 
+The built-in Crownstone (<a href="https://shop.crownstone.rocks/products/built-in-crownstone">shop</a>) is thin and small and fits behind any power outlet. 
+They have exactly the same functionality as the Crownstone plugs. 
+If you know how to install ordinary electrical connectors (Dutch: “kroonsteentjes”), you will be able to install built-in Crownstones as well.</p>
+
+      <h2 id="header-smart-buildings">Smart Buildings</h2>
+
+      <p>The built-in Crownstones are perfect as infrastructure in buildings, such as hotels and nursing homes. Check the <a href="/business">business</a> part of our website if you would like to partner with us for a particular user segment.</p>
+
+      <h2 id="header-scenarios">Scenarios</h2>
+
+      <p>If you would like to read more scenarios and examples on how to use the Crownstones, enjoy the <a href="/scenarios">scenarios</a> section! 
+And of course, be sure to pre-order a few in the <a href="https://shop.crownstone.rocks/?ref=http://crownstone.rocks/">shop</a> 
+if you think presence and proximity is indeed gonna be the game changer that we predict it to be!</p>
+
+    </div><!-- col -->
+
+
+</div><!-- row -->
+
+</div>
+<!-- container -->
+
+<script>
+var focused = true;
+document.addEventListener("visibilitychange", function () {
+  focused = !focused;
+  if (!focused) {
+	  document.getElementById("video").pause();
+  } else {
+	  document.getElementById("video").play();
+  }
+});
+</script>
+
+
+
+
+
+
+
+
+
+<div class="newsletter bottom">
+	<div class="wrapper">
+		<form action="//rocks.us10.list-manage.com/subscribe/post?u=d03baf337210e326a61dc14d5&id=a23d3e9ded" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
+			<label for="Email" class="newsletter__label hidden-label">Sign up to our mailing list</label>
+			<div class="input-group">
+				<input type="email" value="" placeholder="New things to learn and read!" name="EMAIL" id="Email" class="input-group-field newsletter__input" autocorrect="off" autocapitalize="off">
+				<span class="input-group-btn">
+					<button type="submit" class="btn newsletter__submit" name="subscribe" id="Subscribe">
+					<span class="newsletter__submit-text--large">I like!</span>
+					<span class="newsletter__submit-text--small">→</span>
+					</button>
+				</span>
+			</div>
+		</form>
+	</div>
+</div>
+
+
+
+<div class="footer">
+    <br />
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-10">
+                <div class="row">
+                    <div class="col-sm-4 text-center">
+                        <h3>Consumers</h3>
+                        <div style="display:inline-block;">
+                            <ul class="list-unstyled">
+                                
+      	    <li><a href="/" class="footer">Home</a></li>
+      	    <li><a href="/technology-consumer/" class="footer">Tech</a></li>
+      	    <li><a href="/blog/" class="footer">Blog</a></li>
+      	    <li><a href="/jobs/" class="footer">Jobs</a></li>
+      	    <li><a href="/team/" class="footer">Team</a></li>
+      	    <li><a href="/forum/" class="footer">Forum</a></li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 text-center">
+                        <h3>Business</h3>
+                        <div style="display:inline-block;">
+                            <ul class="list-unstyled">
+                                
+      	    <li><a href="/business/" class="footer">Use Cases</a></li>
+      	    <li><a href="/business/developers/" class="footer">Developers</a></li>
+      	    <li><a href="/business/data/" class="footer">Internet of Things</a></li>
+      	    <li><a href="/business/product-development/" class="footer">Product Development</a></li>
+      	    <li><a href="/infrastructure/" class="footer">Infrastructure</a></li>
+                                
+                            </ul>
+                        </div>
+                        <h3>News</h3>
+                        <div style="display:inline-block;">
+                            <ul class="list-unstyled">
+                                
+      	    <li><a href="/email-updates/" class="footer">Fun Newsletter!</a></li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 text-center">
+                        <h3>Order</h3>
+                        <div style="display:inline-block;">
+                            <ul class="list-unstyled text-left">
+                               <li>
+                                  <a class="footer" href="https://shop.crownstone.rocks?launch=en&ref=http://crownstone.rocks/en/">
+                                     <i class="el el-shopping-cart footer"></i>
+                                     
+                                     Webshop
+                                     
+                                  </a>
+                               </li>
+                            </ul>
+                        </div>
+                        <h3>Contact</h3>
+                        <div style="display:inline-block;">
+                            <ul class="list-unstyled text-left">
+                                <li>
+                                    <script type="text/javascript">/*<![CDATA[*/var a=new Array(".rocks", "stone", "crown", "@", "am", "te");document.write("<a href='mailto:");for(i=a.length-1;i>=0;i--){document.write(a[i])}document.write("?subject=Get in contact' class='footer'><i class='el el-envelope footer'></i>Email us!</a>");/*]]>*/</script>
+                                    <noscript><i class="el el-envelope footer"></i>Email team@...</noscript>
+                                </li>
+                                <li>
+                                    <a href="https://www.facebook.com/crownstones/" target="_blank" class="footer">
+                                        <i class="el el-facebook footer"></i>Facebook
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/CrownstoneRocks" target="_blank" class="footer">
+                                        <i class="el el-twitter footer"></i>Twitter
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com/channel/UCru1PX6P1JyhsI-OEMXnBdg" target="_blank" class="footer">
+                                        <i class="el el-youtube footer"></i>Youtube
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.linkedin.com/company/crownstone" target="_blank" class="footer">
+                                        <i class="el el-linkedin footer"></i>Linkedin
+                                    </a>
+                                </li>
+                                <li>
+                                   <a href="https://crownstone.rocks/privacy-policy" class="footer">
+                                        <i class="el el-ok footer"></i>Privacy
+                                    </a>
+                                </li>
+                                <li>
+                                   <a href="https://crownstone.rocks/presskit" class="footer">
+                                        <i class="el el-idea footer"></i>Press
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-1"></div>
+        </div>
+        <br/>
+        <div class="row">
+            <div class="col-sm-12 text-center colofon">
+               <div class="accent">Crownstone</div>
+               <p>Stationsplein 45 d1.118</p>
+               <p>3013 AK Rotterdam, The Netherlands</p>
+               <p>0031103073955 / 010-3073955</p>
+               <br/>
+               <p>
+               This site uses external services. Cookies for the tawk.to chat box (<a href="https://www.tawk.to/privacy-policy/">privacy policy</a>) and the shopify webshop (<a href="https://www.shopify.com/legal/cookies">cookie policy</a>).
+               </p>
+            </div>
+        </div>
+    </div>
+    <br />
+</div>
+
+
+<script async defer src="https://cdn.simpleanalytics.io/hello.js"></script>
+<noscript><img src="https://api.simpleanalytics.io/hello.gif" alt=""></noscript>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-17146802-16', 'auto');
+  ga('set', 'allowAdFeatures', false);
+  ga('send', 'pageview');
+</script>
+
+
+
+<!-- in debug mode, Google Chrome complains about .map files, do not worry -->                    
+<script type="text/javascript" src="/assets/themes/flat/resources/jquery/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="/assets/themes/flat/resources/bootstrap/js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<!--[if gt IE 9]>
+<script type="text/javascript" src="/assets/themes/flat/resources/bootstrap/js/ie10-viewport-bug-workaround.js"></script>
+<![endif]-->
+
+
+<!-- Disable tawk on blog because preferred way of communication is disqus for blog posts. -->
+
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+   var tawk_loaded = false;
+
+   // when loading on demand, people have to click twice, after loading the iframe, click automatically
+   var tawk_autoclick = true;
+
+   // load tawk chat window only on demand
+   function load_tawk() {
+      if (!tawk_loaded) {
+         
+         document.getElementById("tawk-no-tracking-large").style.display = "none";
+         document.getElementById("tawk-no-tracking-small").style.display = "none";
+
+         var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+         (function(){
+            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+            s1.async=true;
+            s1.src='https://embed.tawk.to/565d82718c0c22d759259aee/default';
+            s1.charset='UTF-8';
+            s1.setAttribute('crossorigin','*');
+            s0.parentNode.insertBefore(s1,s0);
+            console.log("Embed tawk script");
+            if (tawk_autoclick == false) {
+               return;
+            }
+
+            setTimeout(
+               function() {
+                  var chat_widgets = document.querySelectorAll('[title="chat widget"]');
+                  var i;
+                  for (i = 0; i < chat_widgets.length; ++i) {
+                     var chat_frame = chat_widgets[i];
+                     console.log("widget", chat_frame);
+                     var box = chat_frame.contentDocument.getElementById("tawkchat-minified-box");
+                     if (box) {
+                        console.log("Touch minified box", box);
+                        var event = new Event('touchstart');
+                        box.dispatchEvent(event);
+                        event = new Event('touchend');
+                        box.dispatchEvent(event);
+                        return;
+                     }
+                     var wrapper = chat_frame.contentDocument.getElementById("tawkchat-minified-wrapper");
+                     if (wrapper) {
+                        console.log("Click minified wrapper", wrapper);
+                        wrapper.click();
+                        return;
+                     }
+                  }
+                  console.log("Done");
+               }, 1000);
+
+         })();
+
+         Tawk_API.onLoad = function(){
+            tawk_loaded = true;
+
+            console.log("Loaded tawk widget (only now)");
+            var pageStatus = Tawk_API.getStatus();
+
+            if (pageStatus === 'away') {
+               var s2 = document.getElementById("short-message");
+               s2.value = "Not there! Email us please!";
+            }
+
+            Tawk_API.maximize();
+         };         
+         
+      }
+   }
+</script>
+<!--End of Tawk.to Script-->
+
+<!-- Dummy block for lazy loading of Tawk.to script -->
+<div class="d-none d-sm-block">
+   <div class="tawk-dummy" id="tawk-no-tracking-large">
+      <div id="tawkchat-minified-wrapper" class="white ltr-direction">
+         <div id="tawkchat-minified-container" class="theme-background-color" style="border-radius: 8px 8px 0px 0px;">
+            <div id="tawkchat-status-middle">
+               <div id="tawkchat-status-text-container" class="theme-text-color">
+                  <div id="tawkchat-status-message">
+                     <span id="short-message" onclick="load_tawk();return false;">Chat with a human! :-) No bots!</span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+<div class="d-block d-sm-none"> 
+   <div class="tawk-dummy-small bottom round" id="tawk-no-tracking-small">
+      <div id="tawkchat-minified-box" style="transform: scale(1); transform-origin: left bottom 0px;">
+         <div id="tawkchat-minified-wrapper">
+            <div id="tawkchat-status-text-container" class="theme-background-color theme-text-color" onclick="load_tawk(); return false;">
+               <div id="tawkchat-status-icon" class="online">
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+
+
+</body>
+</html>
+

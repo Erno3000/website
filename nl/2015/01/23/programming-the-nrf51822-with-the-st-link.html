@@ -1,0 +1,581 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+
+    <meta name="description" content="The ST-Link is incorporated in cheap boards (STM32F boards) and can be used to program the nRF51822">
+
+    
+
+    
+
+    <meta name="keywords" content="nrf51822, bluetooth low energy, smart home, smart homes, domotica, smart plug, home automation, power plug, gadgets, apple, open-source, raspberry pi, smart outlet, smart switch, arduino, alexa, amazon echo, nest, toon, philips hue, homewizard, fibaro, klik-aan-klik-uit, energy savings, comfort">
+    
+    <meta name="author" content="Crownstone B.V.">
+    <link rel="icon" type="image/x-icon" href="https://crownstone.rocks/images/favicon.ico?">
+    <link rel="apple-touch-icon" href="https://crownstone.rocks/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://crownstone.rocks/images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://crownstone.rocks/images/apple-touch-icon-114x114.png">
+
+    <meta name="theme-color" content="#ff8400">
+    <meta name="msapplication-navbutton-color" content="#ff8400">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#ff8400">
+
+    <meta http-equiv="Content-Language" content="nl">
+<link rel="alternate" hreflang="en" href=" https://crownstone.rocks/2015/01/23/programming-the-nrf51822-with-the-st-link"/>
+<link rel="alternate" hreflang="nl" href="https://crownstone.rocks/nl/2015/01/23/programming-the-nrf51822-with-the-st-link"/>
+
+
+    <meta name="google-site-verification" content="qsSndPwnJ3H5zpj9z6ZvY-r4WnvSpMBe5QchxVbIWvw" />
+
+    
+    <title>Crownstone | Programming the nRF51822 with the ST-link</title>
+    <!-- Bootstrap as framework -->
+    <link href="/nl/assets/themes/flat/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/nl/assets/themes/flat/css/crownstone-global.css" rel="stylesheet"> 
+    <link href="/nl/assets/themes/flat/css/elusive-icons.min.css" rel="stylesheet"> 
+	<!-- Open graph social card -->
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Programming the nRF51822 with the ST-link">
+	<meta property="og:url" content="https://crownstone.rocks/2015/01/23/programming-the-nrf51822-with-the-st-link">
+	<meta property="og:image" content="https://crownstone.rocks/images/crownstone-social-card.jpg">
+	<meta property="og:image:secure_url" content="https://crownstone.rocks/images/crownstone-social-card.jpg">
+	<meta property="og:description" content="The ST-Link is incorporated in cheap boards (STM32F boards) and can be used to program the nRF51822">
+	<meta property="og:site_name" content="Crownstone">
+	<!-- Open graph socal card for LinkedIn -->
+	<meta name="title" property="og:title" content="Programming the nRF51822 with the ST-link">
+	<meta name="image" property="og:image" content="https://crownstone.rocks/images/crownstone-social-card.jpg">
+	<meta name="description" property="og:description" content="The ST-Link is incorporated in cheap boards (STM32F boards) and can be used to program the nRF51822">
+	<!-- Twitter social card -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Programming the nRF51822 with the ST-link">
+	<meta name="twitter:description" content="The ST-Link is incorporated in cheap boards (STM32F boards) and can be used to program the nRF51822">
+	<meta name="twitter:image" content="https://crownstone.rocks/images/crownstone-social-card.jpg">
+	<meta name="twitter:image:width" content="240">
+	<meta name="twitter:image:height" content="240">
+    <!-- 
+    <link href="/nl/assets/themes/flat/css/elusive-webfont.css" rel="stylesheet"> 
+    -->
+    <!--[if lt IE 9]>
+        <script src="/assets/themes/flat/resources/respond/Respond.min.js"></script>
+    <![endif]-->
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <!--[if gt IE 9]>
+    <link href="./bootstrap/css/ie10-viewport-bug-workaround.css" rel="stylesheet"> 
+    <![endif]-->
+    <link href="/nl/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/nl/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+    
+
+    
+    
+    
+</head>
+
+<body>
+
+   <nav class="navbar navbar-light navbar-expand-lg">
+      <div class="container navContainer">
+         <img class="navbar-brand topLogo xs img-responsive" src="/images/apple-touch-icon-114x114.png" alt="">
+         <div class="crownstoneText d-block d-lg-none">Crownstone</div>
+
+         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarContents" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+
+         <div class="collapse navbar-collapse" id="navbarContents">
+            <ul class="navbar-nav">
+                                                                                                             
+				<li class="nav-item inactive "><a href="/nl/" class="nav-link">Welkom</a></li>
+				<li class="nav-item inactive "><a href="/nl/technology-consumer/" class="nav-link">Tech</a></li>
+				<li class="nav-item inactive "><a href="/nl/scenarios/" class="nav-link">Scenario's</a></li>
+				<li class="nav-item inactive "><a href="/nl/blog/" class="nav-link">Blog</a></li>
+				<li class="nav-item inactive "><a href="/nl/jobs/" class="nav-link">Banen</a></li>
+				<li class="nav-item inactive "><a href="/nl/team/" class="nav-link">Team</a></li>
+          	<li class="nav-item"><a href="/nl/search/" class="nav-link active"><i class="el el-search"></i></a></li>
+                       
+
+            </ul>
+            <ul class="navbar-nav mr-right">
+               
+<li class="nav-item">
+	
+	
+	<!-- note the space before nav-url, without it polyglot will relativize it: https://github.com/untra/polyglot -->
+	<a  href=" https://crownstone.rocks/2015/01/23/programming-the-nrf51822-with-the-st-link" class="nav-link">en</a>
+</li>
+
+<li class="nav-item">
+	
+	
+	<!-- note the space before nav-url, without it polyglot will relativize it: https://github.com/untra/polyglot -->
+	<a style="font-weight: bold;" href=" https://crownstone.rocks/nl/2015/01/23/programming-the-nrf51822-with-the-st-link" class="nav-link">nl</a>
+</li>
+
+<li class="nav-item accent">
+	<a href="https://shop.crownstone.rocks?launch=nl&ref=http://crownstone.rocks/nl/2015/01/23/programming-the-nrf51822-with-the-st-link" class="nav-link">
+		
+		Winkel
+		
+		<i class="el el-shopping-cart"></i>
+	</a>
+</li>
+<li class="nav-item accent">
+	<a href="https://subscribe.crownstone.rocks/welcome?dest=smarthome&launch=nl&ref=http://crownstone.rocks/nl/2015/01/23/programming-the-nrf51822-with-the-st-link" class="nav-link">
+		
+		Abonnement
+		
+		<i class="el el-person"></i>
+	</a>
+</li>
+
+            </ul>
+         </div>
+      </div>
+   </nav>
+
+
+
+
+
+
+
+
+
+<div class="container">
+	<div class="row post-full">
+		<div class="col-md-12">
+			
+			<div class="date d-none d-lg-block">
+				<strong class="date_month">Jan</strong>
+				<strong class="date_day">23</strong>
+				<strong class="date_year">2015</strong>
+			</div>
+			
+			
+			<div class="author-block">
+				
+				<img src="https://secure.gravatar.com/avatar/818dc2df03cd2f1ca7d6e6e701052f0c?s=40">
+				
+				<span class="author">Anne van Rossum</span>
+			</div>
+			
+			<div class="post">
+				<div class="content">
+					
+<h1 id="header-segger-connector">Segger connector</h1>
+
+<p>If your device has a connector that is meant for The Segger JLink programmer, you can find the pin layout at
+<a href="https://www.segger.com/jlink-adapters.html#CM_9pin">https://www.segger.com/jlink-adapters.html#CM_9pin</a>. The default programmer with the Nordic development kit comes with
+the J-Link 9-pin Cortex-M adapter.</p>
+
+<p>The ones that you will need to break out are four wires that at the top:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. VTref
+2. SWDIO
+3. GND
+4. SWCLK
+</code></pre></div></div>
+
+<p>The first one is optional! It does not provide power, it is used to <strong>measure</strong> if the target board does have power.</p>
+
+<h1 id="header-st-link-programmer">ST-Link programmer</h1>
+
+<p>The ST-Link programmer is not easy obtainable, just as the J-Link programmer is actually hard to come by as a separate
+product.</p>
+
+<p>For that reason it is worth to check into the STM32FDISCOVERY board. You can get the <a href="http://no.mouser.com/ProductDetail/STMicroelectronics/STM32F4DISCOVERY/?qs=J2qbEwLrpCGdWLY96ibNeQ%3D%3D">STM32FDISCOVERY at Mouser</a> for € 13,47. This board is anyway fun, it has a
+lot of GPIO (pins) and it has an ST-Link on-board.</p>
+
+<p><img src="https://crownstone.rocks/attachments/stm32f4_discovery.jpg" alt="STM32F Discovery Board" title="STM32F Discovery Board" /></p>
+
+<p>On the STM32 board you see a connector with the label <code class="highlighter-rouge">SWD</code>. We need to pins from there. From the top (where there is
+the USB connection), we need the second pin and connect it to <code class="highlighter-rouge">SWCLK</code>. From the top we need also the fourth pin, and
+connect it to <code class="highlighter-rouge">SWDIO</code>.</p>
+
+<p>The Crownstone (or RFduino, or any other nRF51822 board) needs then also to be powered and grounded. The power can be
+fed to the device also from the STM32 board. You can connect one of the pins labeled <code class="highlighter-rouge">3V</code> on the right of the board
+to the corresponding pin on your device. Ground can be obtained from many pins, pick one labeled <code class="highlighter-rouge">GND</code>. The VTref pin
+from the J-Link does not have a corresponding VTref pin on the ST-Link. On the STM32FDiscovery board probably 
+somewhere internally the reference voltage is measured. So, you’ll only have to break out three pins of the cable to
+connect it:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>2. SWDIO
+3. GND
+4. SWCLK
+</code></pre></div></div>
+
+<p>Use something like a logic analyzer to see if you do things wrong. This is a very, very useful tool that can save you
+a lot of time.</p>
+
+<h1 id="header-scripts">Scripts</h1>
+
+<p>Normally the Crownstone we program with the J-Link from Segger, but if you want to use this cheaper solution, we also
+created some files for you at the <a href="https://github.com/dobots/bluenet/tree/master/scripts">BlueNet repository at github</a>.</p>
+
+<h2 id="header-combination">Combination</h2>
+
+<p>First of all you can combine all the required binaries into one big binary. This is done by the script <code class="highlighter-rouge">combine.sh</code>.
+Before you use it, you will need to install <code class="highlighter-rouge">srec_cat</code> on your system. On Ubuntu:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install srecord
+</code></pre></div></div>
+
+<p>If you call the script it basically just runs <code class="highlighter-rouge">srec_cat</code>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./combine.sh
+</code></pre></div></div>
+
+<p>And you will see that it runs something like if you only want the SoftDevice and the Crownstone for example:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>srec_cat /opt/softdevices/s110_nrf51822_7.0.0_softdevice.hex -intel crownstone.bin -binary -offset 0x00016000 -o combined.bin
+</code></pre></div></div>
+
+<p>You have to adjust that file on the moment manually to switch between softdevices.</p>
+
+<h2 id="header-openocd">OpenOCD</h2>
+
+<p>Subsequently, we are gonna set up OpenOCD. You should <strong>not</strong> use the one from the Ubuntu repository: it is too old. In case you installed it before:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> sudo apt-get remove --purge openocd
+</code></pre></div></div>
+
+<p>Download fom github and compile the source:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /opt
+git clone https://github.com/ntfreak/openocd
+sudo aptitude install libtool automake libusb-1.0-0-dev expect
+cd openocd
+./bootstrap 
+./configure --enable-stlink
+make
+sudo make install
+</code></pre></div></div>
+
+<p>You will see that there are several files on <a href="https://github.com/dobots/bluenet/tree/master/scripts/openocd">github</a> 
+that you can use. There is a <code class="highlighter-rouge">49-stlinkv2.rules</code> file that you can use for <code class="highlighter-rouge">udev</code> so that no superuser rights are 
+required to use the <code class="highlighter-rouge">ST-Link</code>. There is also an <code class="highlighter-rouge">openocd.cfg</code> file that sets the defaults for the hardware we are
+gonna use (the <code class="highlighter-rouge">nrf51</code> series).</p>
+
+<p>To start OpenOCD you can use our scripts again:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./flash_openocd.sh init
+</code></pre></div></div>
+
+<p>This will start the daemon that subsequently can be talked to over telnet. You can try that if you want to (but this
+is not necessary):</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./flash_openocd.sh connect
+&gt; help
+&gt; exit
+</code></pre></div></div>
+
+<p>To actually upload the binaries you have created, you can use:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./flash_openocd.sh upload combined.hex
+</code></pre></div></div>
+
+<p>This will upload the binary you have previously composed to the target. Ready you are!</p>
+
+<h2 id="header-debugging">Debugging</h2>
+
+<p>If your target does not have pins to break out UART, it might be worth to first try and start experimenting with the
+RFduino. That board has enough pins broken out, to see what for example the Crownstone code is actually doing. For
+example if you combine a SoftDevice with the wrong bootloader, you will see proper error messages. If you know how
+to hook up <code class="highlighter-rouge">gdb</code> over OpenOCD, please feel free to file an issue at <a href="https://github.com/dobots/bluenet/">https://github.com/dobots/bluenet/</a> and I will
+be happy to update this guide.</p>
+
+
+				</div>
+				
+				<div class="d-lg-none">
+					<div class="text-date">
+						<p>23 January 2015</p> 
+					</div>
+				</div>
+
+				
+	
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+
+				
+				<div class="tag_box inline">
+					
+					
+
+
+	
+		
+			<a class="tag" href="/tags.html#nrf51822">nrf51822</a>
+		
+			<a class="tag" href="/tags.html#bluetooth low energy">bluetooth low energy</a>
+		
+	
+
+
+
+
+				</div>
+				
+		</div>
+	</div>
+</div>
+
+<div class="container-fluid post-footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+					<ul class="pagination">
+						
+						<li class="page-item prev"><a class="page-link" href="/nl/2014/11/28/feltyou-prototype" title="FeltYou prototype">&larr; Previous</a></li>
+						
+						<li class="page-item"><a class="page-link" href="/nl/blog">Archive</a></li>
+						
+						<li class="page-item next"><a class="page-link" href="/nl/2015/03/30/attaching-a-microview-to-the-crownstone" title="Attaching a MicroView to the Crownstone">Next &rarr;</a></li>
+						
+					</ul>
+			</div>
+			<div class="col-md-6">
+
+					<div class="social-button-footer">
+						<p>
+						<a class="btn btn-social-icon btn-twitter" href="http://twitter.com/intent/tweet?url=https://crownstone.rocks/2015/01/23/programming-the-nrf51822-with-the-st-link&text=Programming the nRF51822 with the ST-link"><i class="el el-twitter"></i></a>
+						<a class="btn btn-social-icon btn-facebook" href="http://facebook.com/sharer.php?u=https://crownstone.rocks/2015/01/23/programming-the-nrf51822-with-the-st-link"><i class="el el-facebook"></i></a>
+						<a class="btn btn-social-icon btn-googleplus" href="https://plus.google.com/share?url=https://crownstone.rocks/2015/01/23/programming-the-nrf51822-with-the-st-link"><i class="el el-googleplus"></i></a>
+						<a class="btn btn-social-icon btn-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https://crownstone.rocks/2015/01/23/programming-the-nrf51822-with-the-st-link"><i class="el el-linkedin"></i></a>
+						<a class="btn btn-social-icon btn-reddit" href="http://reddit.com/submit?url=https://crownstone.rocks/2015/01/23/programming-the-nrf51822-with-the-st-link&title=Programming the nRF51822 with the ST-link"><i class="el el-reddit"></i></a>
+						</p>
+					</div>
+
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+					
+
+
+  <div id="disqus_thread">
+	<div class="disqus_block">
+		<p>
+			<a href="#" onclick="disqus();return false;"><i class="el el-group"></i> Show Comments</a>
+		</p>
+		<p>
+			(not shown automatically to support your privacy)
+		</p>
+	</div>
+</div>
+
+<script type="text/javascript">
+	var disqus_shortname = 'crownstone'; 
+	var disqus_loaded = false;
+	// load disqus comments only on demand
+	function disqus() {
+
+	  if (!disqus_loaded)  {
+		var e = document.createElement("script");
+		e.type = "text/javascript";
+		e.async = true;
+		e.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+		(document.getElementsByTagName("head")[0] ||
+		 document.getElementsByTagName("body")[0])
+		.appendChild(e);
+	  }
+	}
+</script>
+
+
+
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+<div class="newsletter bottom">
+	<div class="wrapper">
+		<form action="//rocks.us10.list-manage.com/subscribe/post?u=d03baf337210e326a61dc14d5&id=a23d3e9ded" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
+			<label for="Email" class="newsletter__label hidden-label">Sign up to our mailing list</label>
+			<div class="input-group">
+				<input type="email" value="" placeholder="New things to learn and read!" name="EMAIL" id="Email" class="input-group-field newsletter__input" autocorrect="off" autocapitalize="off">
+				<span class="input-group-btn">
+					<button type="submit" class="btn newsletter__submit" name="subscribe" id="Subscribe">
+					<span class="newsletter__submit-text--large">I like!</span>
+					<span class="newsletter__submit-text--small">→</span>
+					</button>
+				</span>
+			</div>
+		</form>
+	</div>
+</div>
+
+
+
+<div class="footer">
+    <br />
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-10">
+                <div class="row">
+                    <div class="col-sm-4 text-center">
+                        <h3>Consumers</h3>
+                        <div style="display:inline-block;">
+                            <ul class="list-unstyled">
+                                
+      	    <li><a href="/nl/" class="footer">Welkom</a></li>
+      	    <li><a href="/nl/technology-consumer/" class="footer">Tech</a></li>
+      	    <li><a href="/nl/blog/" class="footer">Blog</a></li>
+      	    <li><a href="/nl/jobs/" class="footer">Banen</a></li>
+      	    <li><a href="/nl/team/" class="footer">Team</a></li>
+      	    <li><a href="/nl/forum/" class="footer">Forum</a></li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 text-center">
+                        <h3>Business</h3>
+                        <div style="display:inline-block;">
+                            <ul class="list-unstyled">
+                                
+      	    <li><a href="/nl/business/" class="footer">Use Cases</a></li>
+      	    <li><a href="/nl/business/developers/" class="footer">Developers</a></li>
+      	    <li><a href="/nl/business/data/" class="footer">Internet of Things</a></li>
+      	    <li><a href="/nl/business/product-development/" class="footer">Product Development</a></li>
+      	    <li><a href="/nl/infrastructure/" class="footer">Infrastructure</a></li>
+                                
+                            </ul>
+                        </div>
+                        <h3>News</h3>
+                        <div style="display:inline-block;">
+                            <ul class="list-unstyled">
+                                
+      	    <li><a href="/nl/email-updates/" class="footer">Fun Newsletter!</a></li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 text-center">
+                        <h3>Order</h3>
+                        <div style="display:inline-block;">
+                            <ul class="list-unstyled text-left">
+                               <li>
+                                  <a class="footer" href="https://shop.crownstone.rocks?launch=nl&ref=http://crownstone.rocks/nl/2015/01/23/programming-the-nrf51822-with-the-st-link">
+                                     <i class="el el-shopping-cart footer"></i>
+                                     
+                                     Webwinkel
+                                     
+                                  </a>
+                               </li>
+                            </ul>
+                        </div>
+                        <h3>Contact</h3>
+                        <div style="display:inline-block;">
+                            <ul class="list-unstyled text-left">
+                                <li>
+                                    <script type="text/javascript">/*<![CDATA[*/var a=new Array(".rocks", "stone", "crown", "@", "am", "te");document.write("<a href='mailto:");for(i=a.length-1;i>=0;i--){document.write(a[i])}document.write("?subject=Get in contact' class='footer'><i class='el el-envelope footer'></i>Email us!</a>");/*]]>*/</script>
+                                    <noscript><i class="el el-envelope footer"></i>Email team@...</noscript>
+                                </li>
+                                <li>
+                                    <a href="https://www.facebook.com/crownstones/" target="_blank" class="footer">
+                                        <i class="el el-facebook footer"></i>Facebook
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/CrownstoneRocks" target="_blank" class="footer">
+                                        <i class="el el-twitter footer"></i>Twitter
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com/channel/UCru1PX6P1JyhsI-OEMXnBdg" target="_blank" class="footer">
+                                        <i class="el el-youtube footer"></i>Youtube
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.linkedin.com/company/crownstone" target="_blank" class="footer">
+                                        <i class="el el-linkedin footer"></i>Linkedin
+                                    </a>
+                                </li>
+                                <li>
+                                   <a href="https://crownstone.rocks/nl/privacy-policy" class="footer">
+                                        <i class="el el-ok footer"></i>Privacy
+                                    </a>
+                                </li>
+                                <li>
+                                   <a href="https://crownstone.rocks/nl/presskit" class="footer">
+                                        <i class="el el-idea footer"></i>Press
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-1"></div>
+        </div>
+        <br/>
+        <div class="row">
+            <div class="col-sm-12 text-center colofon">
+               <div class="accent">Crownstone</div>
+               <p>Stationsplein 45 d1.118</p>
+               <p>3013 AK Rotterdam, The Netherlands</p>
+               <p>0031103073955 / 010-3073955</p>
+               <br/>
+               <p>
+               This site uses external services. Cookies for the tawk.to chat box (<a href="https://www.tawk.to/privacy-policy/">privacy policy</a>) and the shopify webshop (<a href="https://www.shopify.com/legal/cookies">cookie policy</a>).
+               </p>
+            </div>
+        </div>
+    </div>
+    <br />
+</div>
+
+
+<script async defer src="https://cdn.simpleanalytics.io/hello.js"></script>
+<noscript><img src="https://api.simpleanalytics.io/hello.gif" alt=""></noscript>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-17146802-16', 'auto');
+  ga('set', 'allowAdFeatures', false);
+  ga('send', 'pageview');
+</script>
+
+
+
+<!-- in debug mode, Google Chrome complains about .map files, do not worry -->                    
+<script type="text/javascript" src="/assets/themes/flat/resources/jquery/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="/assets/themes/flat/resources/bootstrap/js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<!--[if gt IE 9]>
+<script type="text/javascript" src="/assets/themes/flat/resources/bootstrap/js/ie10-viewport-bug-workaround.js"></script>
+<![endif]-->
+
+
+<!-- Disable tawk on blog because preferred way of communication is disqus for blog posts. -->
+
+
+</body>
+</html>
+

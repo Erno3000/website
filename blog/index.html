@@ -1,0 +1,1890 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+
+    <meta name="description" content="Blog written by the Crownstone team">
+
+    
+
+    
+
+    <meta name="keywords" content="smart home, smart homes, domotica, smart plug, home automation, power plug, gadgets, apple, open-source, raspberry pi, smart outlet, smart switch, arduino, alexa, amazon echo, nest, toon, philips hue, homewizard, fibaro, klik-aan-klik-uit, energy savings, comfort">
+    
+    <meta name="author" content="Crownstone B.V.">
+    <link rel="icon" type="image/x-icon" href="https://crownstone.rocks/images/favicon.ico?">
+    <link rel="apple-touch-icon" href="https://crownstone.rocks/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://crownstone.rocks/images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://crownstone.rocks/images/apple-touch-icon-114x114.png">
+
+    <meta name="theme-color" content="#ff8400">
+    <meta name="msapplication-navbutton-color" content="#ff8400">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#ff8400">
+
+    <meta http-equiv="Content-Language" content="en">
+<link rel="alternate" hreflang="en" href=" https://crownstone.rocks/blog/"/>
+<link rel="alternate" hreflang="nl" href="https://crownstone.rocks/nl/blog/"/>
+
+
+    <meta name="google-site-verification" content="qsSndPwnJ3H5zpj9z6ZvY-r4WnvSpMBe5QchxVbIWvw" />
+
+    
+    <title>Crownstone | Blog</title>
+    <!-- Bootstrap as framework -->
+    <link href="/assets/themes/flat/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/themes/flat/css/crownstone-global.css" rel="stylesheet"> 
+    <link href="/assets/themes/flat/css/elusive-icons.min.css" rel="stylesheet"> 
+	<!-- Open graph social card -->
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Blog">
+	<meta property="og:url" content="https://crownstone.rocks/blog/">
+	<meta property="og:image" content="https://crownstone.rocks/images/crownstone-social-card.jpg">
+	<meta property="og:image:secure_url" content="https://crownstone.rocks/images/crownstone-social-card.jpg">
+	<meta property="og:description" content="Blog written by the Crownstone team">
+	<meta property="og:site_name" content="Crownstone">
+	<!-- Open graph socal card for LinkedIn -->
+	<meta name="title" property="og:title" content="Blog">
+	<meta name="image" property="og:image" content="https://crownstone.rocks/images/crownstone-social-card.jpg">
+	<meta name="description" property="og:description" content="Blog written by the Crownstone team">
+	<!-- Twitter social card -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Blog">
+	<meta name="twitter:description" content="Blog written by the Crownstone team">
+	<meta name="twitter:image" content="https://crownstone.rocks/images/crownstone-social-card.jpg">
+	<meta name="twitter:image:width" content="240">
+	<meta name="twitter:image:height" content="240">
+    <!-- 
+    <link href="/assets/themes/flat/css/elusive-webfont.css" rel="stylesheet"> 
+    -->
+    <!--[if lt IE 9]>
+        <script src="/assets/themes/flat/resources/respond/Respond.min.js"></script>
+    <![endif]-->
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <!--[if gt IE 9]>
+    <link href="./bootstrap/css/ie10-viewport-bug-workaround.css" rel="stylesheet"> 
+    <![endif]-->
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+    
+
+    
+    
+    
+</head>
+
+<body>
+
+   <nav class="navbar navbar-light navbar-expand-lg">
+      <div class="container navContainer">
+         <img class="navbar-brand topLogo xs img-responsive" src="/images/apple-touch-icon-114x114.png" alt="">
+         <div class="crownstoneText d-block d-lg-none">Crownstone</div>
+
+         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarContents" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+
+         <div class="collapse navbar-collapse" id="navbarContents">
+            <ul class="navbar-nav">
+                                                                                                             
+				<li class="nav-item inactive "><a href="/" class="nav-link">Home</a></li>
+				<li class="nav-item inactive "><a href="/technology-consumer/" class="nav-link">Tech</a></li>
+				<li class="nav-item inactive "><a href="/scenarios/" class="nav-link">Scenarios</a></li>
+				<li class="nav-item active"><a href="/blog/" class="nav-link active">Blog</a></li>
+				<li class="nav-item inactive "><a href="/jobs/" class="nav-link">Jobs</a></li>
+				<li class="nav-item inactive "><a href="/team/" class="nav-link">Team</a></li>
+          	<li class="nav-item"><a href="/search/" class="nav-link active"><i class="el el-search"></i></a></li>
+                       
+
+            </ul>
+            <ul class="navbar-nav mr-right">
+               
+<li class="nav-item">
+	
+	
+	<!-- note the space before nav-url, without it polyglot will relativize it: https://github.com/untra/polyglot -->
+	<a style="font-weight: bold;" href=" https://crownstone.rocks/blog/" class="nav-link">en</a>
+</li>
+
+<li class="nav-item">
+	
+	
+	<!-- note the space before nav-url, without it polyglot will relativize it: https://github.com/untra/polyglot -->
+	<a  href=" https://crownstone.rocks/nl/blog/" class="nav-link">nl</a>
+</li>
+
+<li class="nav-item accent">
+	<a href="https://shop.crownstone.rocks?launch=en&ref=http://crownstone.rocks/en/blog/" class="nav-link">
+		
+		Shop
+		
+		<i class="el el-shopping-cart"></i>
+	</a>
+</li>
+<li class="nav-item accent">
+	<a href="https://subscribe.crownstone.rocks/welcome?dest=smarthome&launch=en&ref=http://crownstone.rocks/en/blog/" class="nav-link">
+		
+		Subscription
+		
+		<i class="el el-person"></i>
+	</a>
+</li>
+
+            </ul>
+         </div>
+      </div>
+   </nav>
+
+
+<!-- background-image -->
+<div class="bannerContainer xl d-none d-xl-flex banner-blog.jpg" style="background-image: url(/images/banners/banner-blog.jpg)">
+   
+   <div class="banner-caption white-caption">
+   <h1>Daytime stories</h1>
+   </div>
+   
+</div>
+<div class="bannerContainer lg d-none d-lg-flex d-xl-none banner-blog.jpg" style="background-image: url(/images/banners/banner-blog.jpg)">
+   
+   <div class="banner-caption white-caption">
+   <h1>Daytime stories</h1>
+   </div>
+   
+</div>
+<div class="bannerContainer md d-none d-md-flex d-lg-none banner-blog.jpg" style="background-image: url(/images/banners/banner-blog.jpg)">
+   
+   <div class="banner-caption white-caption">
+   <h1>Daytime stories</h1>
+   </div>
+   
+</div>
+<div class="bannerContainer sm d-none d-sm-flex d-md-none banner-blog.jpg" style="background-image: url(/images/banners/banner-blog.jpg)">
+   
+   <div class="banner-caption white-caption">
+   <h1>Daytime stories</h1>
+   </div>
+   
+</div>
+<div class="bannerContainer xs d-flex d-sm-none banner-blog.jpg" style="background-image: url(/images/banners/banner-blog.jpg)">
+</div>
+<!-- end background-image -->
+
+
+
+
+
+
+
+
+
+<div class="container">
+
+
+<div class="row ">
+
+
+<div class="col-xs-12 col-sm-12 col-md-12">
+
+      <h1 id="header-blog">Blog</h1>
+
+      <p>At Crownstone we blog about a wide range of topics. Enjoy reading and feel free to contact us if you want to know more details!
+Also check out our newsletters (which will show up on our blog with a delay) which you can read back at 
+<a href="http://us10.campaign-archive2.com/home/?u=d03baf337210e326a61dc14d5&amp;id=a23d3e9ded">this list</a> 
+and subscribe at the bottom of this page if you want to stay on top!</p>
+
+    </div><!-- col -->
+
+</div><!-- row -->
+
+</div>
+<!-- container -->
+
+<div class="container">
+	<div class="row">
+		<div class="col">
+		
+		
+
+
+  
+    
+    
+    
+    
+  
+    
+      <h2>2020</h2>
+      <h3>May</h3>
+    
+
+	<div class="post-title">
+	<p><a href="/2020/05/06/bluetooth-for-proximity-detection">Bluetooth for proximity detection.</a>
+	
+	The use of Bluetooth LE for contact tracing is not a panacea. There are a lot of factors that influence the signal strength and with that the distance estimates. Those are factors like phone orientation, multi-path attenuation or fading, obstructions, and many more.
+	
+	
+	  <img src="https://crownstone.rocks/attachments/blog/multiple_phones.png" alt="Bluetooth for proximity detection." width="100%" />
+	
+	</p>
+	</div>
+  
+    
+          
+        
+          <h3>March</h3>
+        
+      
+    
+  
+    
+    
+    
+    
+  
+    
+
+	<div class="post-title">
+	<p><a href="/2020/03/04/crownstone-new-behaviour">Crownstone New Behaviour.</a>
+	
+	Crownstones behaviour become smarter overnight. Now your house can react even more flexible to your presence of the presence of people in your household. There is a twilight mode that allows you to automatically dim lights when it is night. There is also a new section with abilities that can you enable.
+	
+	
+	  <img src="https://crownstone.rocks/attachments/blog/app_behaviour.png" alt="Crownstone New Behaviour." width="100%" />
+	
+	</p>
+	</div>
+  
+    
+      
+        <h2>2019</h2>
+        <h3>December</h3>
+      
+    
+  
+    
+    
+    
+    
+  
+    
+
+	<div class="post-title">
+	<p><a href="/2019/12/17/sneak-preview-of-new-behaviour">Sneak Preview of New Behaviour.</a>
+	
+	Sneak preview of new behaviour. It can control a light very fast!
+	
+	
+	  <img src="https://crownstone.rocks/attachments/blog/excellent_beurs.png" alt="Sneak Preview of New Behaviour." width="100%" />
+	
+	</p>
+	</div>
+  
+    
+          
+        
+          <h3>September</h3>
+        
+      
+    
+  
+    
+    
+    
+    
+  
+    
+
+	<div class="post-title">
+	<p><a href="/2019/09/24/the-crownstone-built-in-one">The Crownstone Built-in One.</a>
+	
+	The Crownstone Built-in One supports switchcraft, the simultaneous use of an ordinary light switch with the digital control from your smartphone.
+	
+	
+	  <img src="https://crownstone.rocks/attachments/blog/builtin_one.jpg" alt="The Crownstone Built-in One." width="100%" />
+	
+	</p>
+	</div>
+  
+    
+          
+        
+          <h3>May</h3>
+        
+      
+    
+  
+    
+    
+    
+    
+  
+    
+
+	<div class="post-title">
+	<p><a href="/2019/05/23/firmware-and-hardware-wizardry">Firmware and hardware wizardry.</a>
+	
+	For a noob, the code on a device like Crownstone might look like magic spells; the programmer might look like a wizard including the long hair; the computer like a science-fiction console. However, did you know that as a firmware developer most of the time is spend on debugging!?
+	
+	
+	  <img src="https://crownstone.rocks/attachments/blog/firmware_developer.png" alt="Firmware and hardware wizardry." width="100%" />
+	
+	</p>
+	</div>
+  
+    
+          
+        
+          <h3>March</h3>
+        
+      
+    
+  
+    
+    
+    
+    
+  
+    
+
+	<div class="post-title">
+	<p><a href="/2019/03/07/privacy-matters">Privacy matters.</a>
+	
+	When we enter a hotel room in a new country the small changes that normally get unnoticed suddenly get noticed. Dan Hill cites Timothy Morton: '*the light switch seems a little closer than normal, a little differently placed on the wall*'. Technology should be seamlessly integrated in our environment.
+	
+	
+	  <img src="https://crownstone.rocks/attachments/blog/heidegger.jpg" alt="Privacy matters." width="100%" />
+	
+	</p>
+	</div>
+  
+    
+      
+        <h2>2018</h2>
+        <h3>November</h3>
+      
+    
+  
+    
+    
+    
+    
+  
+    
+
+	<div class="post-title">
+	<p><a href="/2018/11/28/smart-speakers-are-changing-the-future">Smart Speakers are Changing the Future.</a>
+	
+	The history from the Echo 4 to the Echo now and what this means for our homes getting smarter right now.
+	
+	
+	  <img src="https://crownstone.rocks/attachments/blog/early_echo.jpg" alt="Smart Speakers are Changing the Future." width="100%" />
+	
+	</p>
+	</div>
+  
+    
+          
+        
+          <h3>October</h3>
+        
+      
+    
+  
+    
+    
+    
+    
+  
+    
+
+	<div class="post-title">
+	<p><a href="/2018/10/12/crownstone-energy-consumption-in-standby">Crownstone energy consumption in standby.</a>
+	
+	The Crownstones use very little power themselves. This means that they can operate as standby killers.
+	
+	
+	  <img src="https://crownstone.rocks/attachments/blog/power_measurement_10plugs.png" alt="Crownstone energy consumption in standby." width="100%" />
+	
+	</p>
+	</div>
+  
+    
+          
+        
+          <h3>June</h3>
+        
+      
+    
+  
+    
+    
+    
+    
+  
+    
+
+	<div class="post-title">
+	<p><a href="/2018/06/27/ios-advertisements-in-the-background">iOS advertisements in the background.</a>
+	
+	Developers have a hard time to cope with iOS advertisements as soon as the app goes into the background mode. However, it is possible to scan for devices, it just requires more in-depth knowledge.
+	
+	
+	  <img src="https://crownstone.rocks/attachments/ble-background-advertisements.png" alt="iOS advertisements in the background." width="100%" />
+	
+	</p>
+	</div>
+  
+    
+          
+        
+          <h3>March</h3>
+        
+      
+    
+  
+    
+    
+    
+    
+  
+    
+
+	<div class="post-title">
+	<p><a href="/2018/03/13/switchcraft-and-dimming">Switchcraft and dimming!</a>
+	
+	We have been testing the dimming behavior extensively and are rolling this out as we speak. Yes, LED dimming as well!
+	
+	
+	  <img src="https://crownstone.rocks/attachments/allow-dimming1.png" alt="Switchcraft and dimming!" width="100%" />
+	
+	</p>
+	</div>
+  
+    
+      
+        <h2>2017</h2>
+        <h3>October</h3>
+      
+    
+  
+    
+    
+    
+    
+  
+    
+
+	<div class="post-title">
+	<p><a href="/2017/10/31/the-internet-of-stolen-things">The internet of stolen things</a>
+	
+	A bike of other object can have an iBeacon attached to it. If Crownstones are strategically positioned they can help scanning for these beacons when such an object is stolen.
+	
+	
+	  <img src="https://crownstone.rocks/attachments/guidestones.jpg" alt="The internet of stolen things" width="100%" />
+	
+	</p>
+	</div>
+  
+    
+          
+        
+          <h3>August</h3>
+        
+      
+    
+  
+    
+    
+    
+    
+  
+    
+
+	<div class="post-title">
+	<p><a href="/2017/08/31/flex-energy-arriving">Flex energy arriving?</a>
+	
+	
+
+	
+	
+	</p>
+	</div>
+  
+    
+          
+        
+          <h3>July</h3>
+        
+      
+    
+  
+    
+    
+    
+    
+  
+    
+
+	<div class="post-title">
+	<p><a href="/2017/07/28/adc-noise">ADC noise</a>
+	
+	
+
+	
+	
+	</p>
+	</div>
+  
+    
+          
+        
+      
+    
+  
+    
+    
+    
+    
+  
+    
+
+	<div class="post-title">
+	<p><a href="/2017/07/20/a-nerd-discussing-bluetooth-mesh">A nerd discussing Bluetooth Mesh</a>
+	
+	
+
+	
+	
+	</p>
+	</div>
+  
+    
+          
+        
+          <h3>June</h3>
+        
+      
+    
+  
+    
+    
+    
+    
+  
+    
+
+	<div class="post-title">
+	<p><a href="/2017/06/16/thermostats-and-energy-labels-fail">Thermostats and energy labels fail!</a>
+	
+	Thermostats and energy labels are not what they should be. A technology that works is zoned heating. In the meantime we got our Bluetooth certification!
+	
+	
+	  <img src="https://crownstone.rocks/attachments/bluetooth-product-listing.jpg" alt="Thermostats and energy labels fail!" width="100%" />
+	
+	</p>
+	</div>
+  
+    
+          
+        
+          <h3>May</h3>
+        
+      
+    
+  
+    
+    
+    
+    
+  
+    
+
+	<div class="post-title">
+	<p><a href="/2017/05/05/a-meshy-mess">A meshy mess</a>
+	
+	
+
+	
+	
+	</p>
+	</div>
+  
+    
+          
+        
+          <h3>March</h3>
+        
+      
+    
+  
+    
+    
+    
+    
+  
+    
+
+	<div class="post-title">
+	<p><a href="/2017/03/21/watch-out-with-wiring-in-your-home">Watch out with wiring in your home!</a>
+	
+	
+
+	
+	
+	</p>
+	</div>
+  
+    
+          
+        
+      
+    
+  
+    
+    
+    
+    
+  
+    
+
+	<div class="post-title">
+	<p><a href="/2017/03/03/does-alexa-have-skills">Does Alexa have skills?</a>
+	
+	
+
+	
+	
+	</p>
+	</div>
+  
+    
+          
+        
+          <h3>February</h3>
+        
+      
+    
+  
+    
+    
+    
+    
+  
+    
+
+	<div class="post-title">
+	<p><a href="/2017/02/21/do-you-want-fancy-light-bulbs-think-again">Do you want fancy light bulbs? Think again!</a>
+	
+	
+
+	
+	
+	</p>
+	</div>
+  
+    
+          
+        
+          <h3>January</h3>
+        
+      
+    
+  
+    
+    
+    
+    
+  
+    
+
+	<div class="post-title">
+	<p><a href="/2017/01/07/the-devilish-dilemma-of-supporting-android-and-ios-with-ble">The devilish dilemma of supporting Android and iOS with BLE</a>
+	
+	
+
+	
+	
+	</p>
+	</div>
+  
+    
+          
+        
+      
+    
+  
+    
+    
+    
+    
+  
+    
+
+	<div class="post-title">
+	<p><a href="/2017/01/06/deliveries-in-full-swing">Deliveries in full swing</a>
+	
+	Delivering Crownstone plugs! After a very busy time just before and during the holidays we shipped!
+	
+	
+	  <img src="https://crownstone.rocks/attachments/delivery-going-out.jpg" alt="Deliveries in full swing" width="100%" />
+	
+	</p>
+	</div>
+  
+    
+      
+        <h2>2016</h2>
+        <h3>December</h3>
+      
+    
+  
+    
+    
+    
+    
+  
+    
+
+	<div class="post-title">
+	<p><a href="/2016/12/02/a-signal-from-outer-space">A signal from outer space!</a>
+	
+	
+
+	
+	
+	</p>
+	</div>
+  
+    
+          
+        
+          <h3>November</h3>
+        
+      
+    
+  
+    
+    
+    
+    
+  
+    
+
+	<div class="post-title">
+	<p><a href="/2016/11/08/lots-of-boxes-arriving">Lots of boxes arriving!</a>
+	
+	
+
+	
+	
+	</p>
+	</div>
+  
+    
+          
+        
+          <h3>October</h3>
+        
+      
+    
+  
+    
+    
+    
+    
+  
+    
+
+	<div class="post-title">
+	<p><a href="/2016/10/25/resistant-resistors">Resistant Resistors</a>
+	
+	
+
+	
+	
+	</p>
+	</div>
+  
+    
+          
+        
+      
+    
+  
+    
+    
+    
+    
+  
+    
+
+	<div class="post-title">
+	<p><a href="/2016/10/06/why-is-engineering-of-the-utmost-importance">Why is engineering of the utmost importance?</a>
+	
+	
+
+	
+	
+	</p>
+	</div>
+  
+    
+          
+        
+          <h3>September</h3>
+        
+      
+    
+  
+    
+    
+    
+    
+  
+    
+
+	<div class="post-title">
+	<p><a href="/2016/09/06/they-broke-the-mould">They broke the mould</a>
+	
+	
+
+	
+	
+	</p>
+	</div>
+  
+    
+          
+        
+          <h3>August</h3>
+        
+      
+    
+  
+    
+    
+    
+    
+  
+    
+
+	<div class="post-title">
+	<p><a href="/2016/08/11/holidays">Holidays!</a>
+	
+	
+
+	
+	
+	</p>
+	</div>
+  
+    
+          
+        
+          <h3>April</h3>
+        
+      
+    
+  
+    
+    
+    
+    
+  
+    
+
+	<div class="post-title">
+	<p><a href="/2016/04/20/dimming-random-devices-with-the-crownstone">Dimming random devices with the Crownstone</a>
+	
+	
+
+	
+	
+	</p>
+	</div>
+  
+    
+          
+        
+          <h3>January</h3>
+        
+      
+    
+  
+    
+    
+    
+    
+  
+    
+
+	<div class="post-title">
+	<p><a href="/2016/01/28/inertia-energy-balance-management-system">Inertia energy balance management system</a>
+	
+	
+
+	
+	
+	</p>
+	</div>
+  
+    
+      
+        <h2>2015</h2>
+        <h3>September</h3>
+      
+    
+  
+    
+    
+    
+    
+  
+    
+
+	<div class="post-title">
+	<p><a href="/2015/09/04/recognize-that-fridge">Recognize that fridge!</a>
+	
+	
+
+	
+	
+	</p>
+	</div>
+  
+    
+          
+        
+      
+    
+  
+    
+    
+    
+    
+  
+    
+
+	<div class="post-title">
+	<p><a href="/2015/09/03/human-slam-indoor-localization-using-particle-filters">Human SLAM, Indoor localization using particle filters</a>
+	
+	
+
+	
+	
+	</p>
+	</div>
+  
+    
+          
+        
+          <h3>August</h3>
+        
+      
+    
+  
+    
+    
+    
+    
+  
+    
+
+	<div class="post-title">
+	<p><a href="/2015/08/25/im-busy-the-app-that-keeps-up-your-status">I'm Busy: the app that keeps up your status</a>
+	
+	
+
+	
+	
+	</p>
+	</div>
+  
+    
+          
+        
+          <h3>July</h3>
+        
+      
+    
+  
+    
+    
+    
+    
+  
+    
+
+	<div class="post-title">
+	<p><a href="/2015/07/24/crownstone-what-is-it-students-find-out">Crownstone. What is it? Students find out!</a>
+	
+	
+
+	
+	
+	</p>
+	</div>
+  
+    
+          
+        
+          <h3>May</h3>
+        
+      
+    
+  
+    
+    
+    
+    
+  
+    
+
+	<div class="post-title">
+	<p><a href="/2015/05/26/smart-product-for-weight-loss">Smart Product for Weight Loss</a>
+	
+	
+
+	
+	
+	</p>
+	</div>
+  
+    
+          
+        
+          <h3>March</h3>
+        
+      
+    
+  
+    
+    
+    
+    
+  
+    
+
+	<div class="post-title">
+	<p><a href="/2015/03/30/attaching-a-microview-to-the-crownstone">Attaching a MicroView to the Crownstone</a>
+	
+	
+
+	
+	
+	</p>
+	</div>
+  
+    
+          
+        
+          <h3>January</h3>
+        
+      
+    
+  
+    
+    
+    
+    
+  
+    
+
+	<div class="post-title">
+	<p><a href="/2015/01/23/programming-the-nrf51822-with-the-st-link">Programming the nRF51822 with the ST-link</a>
+	
+	
+
+	
+	
+	</p>
+	</div>
+  
+    
+      
+        <h2>2014</h2>
+        <h3>November</h3>
+      
+    
+  
+    
+    
+    
+    
+  
+    
+
+	<div class="post-title">
+	<p><a href="/2014/11/28/feltyou-prototype">FeltYou prototype</a>
+	
+	
+
+	
+	
+	</p>
+	</div>
+  
+    
+          
+        
+          <h3>September</h3>
+        
+      
+    
+  
+    
+    
+    
+    
+  
+    
+
+	<div class="post-title">
+	<p><a href="/2014/09/16/the-making-of-the-virtual-memo">The making of the Virtual Memo</a>
+	
+	
+
+	
+	
+	</p>
+	</div>
+  
+    
+          
+        
+          <h3>July</h3>
+        
+      
+    
+  
+    
+    
+    
+    
+  
+    
+
+	<div class="post-title">
+	<p><a href="/2014/07/23/linux-and-ble">Linux and BLE</a>
+	
+	
+
+	
+	
+	</p>
+	</div>
+  
+    
+          
+        
+      
+    
+  
+    
+    
+    
+    
+  
+    
+
+	<div class="post-title">
+	<p><a href="/2014/07/15/ble-dobeacon-a-virtual-memo">BLE, doBeacon, a Virtual Memo</a>
+	
+	
+
+	
+	
+	</p>
+	</div>
+  
+    
+          
+        
+          <h3>June</h3>
+        
+      
+    
+  
+    
+    
+    
+    
+  
+    
+
+	<div class="post-title">
+	<p><a href="/2014/06/25/a-nonparametric-bayesian-lesson">A nonparametric Bayesian lesson</a>
+	
+	
+
+	
+	
+	</p>
+	</div>
+  
+    
+          
+        
+          <h3>May</h3>
+        
+      
+    
+  
+    
+    
+    
+    
+  
+    
+
+	<div class="post-title">
+	<p><a href="/2014/05/28/sportopia-friends-are-your-best-coach">Sportopia, friends are your best coach!</a>
+	
+	
+
+	
+	
+	</p>
+	</div>
+  
+    
+          
+        
+          <h3>March</h3>
+        
+      
+    
+  
+    
+    
+    
+    
+  
+    
+
+	<div class="post-title">
+	<p><a href="/2014/03/05/rfduino-without-rfduino-code">RFduino without RFduino code</a>
+	
+	
+
+	
+	
+	</p>
+	</div>
+  
+    
+      
+        <h2>2013</h2>
+        <h3>July</h3>
+      
+    
+  
+    
+    
+    
+    
+  
+    
+
+	<div class="post-title">
+	<p><a href="/2013/07/19/irc-xmpp-and-whatsapp">IRC, XMPP and WhatsApp</a>
+	
+	
+
+	
+	
+	</p>
+	</div>
+  
+    
+          
+        
+      
+    
+  
+    
+    
+    
+    
+  
+    
+
+	<div class="post-title">
+	<p><a href="/2013/07/12/introduction-to-one-class-support-vector">Introduction to One-Class Support Vector Machine</a>
+	
+	
+
+	
+	
+	</p>
+	</div>
+  
+    
+          
+        
+          <h3>April</h3>
+        
+      
+    
+  
+    
+    
+    
+    
+  
+    
+
+	<div class="post-title">
+	<p><a href="/2013/04/19/extreme-learning-machines">Extreme Learning Machines</a>
+	
+	
+
+	
+	
+	</p>
+	</div>
+  
+    
+          
+        
+      
+    
+  
+    
+    
+    
+    
+  
+    
+
+	<div class="post-title">
+	<p><a href="/2013/04/12/visualizing-accelerometer-data">Visualizing accelerometer data</a>
+	
+	
+
+	
+	
+	</p>
+	</div>
+  
+    
+          
+        
+          <h3>March</h3>
+        
+      
+    
+  
+    
+    
+    
+    
+  
+    
+
+	<div class="post-title">
+	<p><a href="/2013/03/11/maker-inspiration">Maker Inspiration</a>
+	
+	
+
+	
+	
+	</p>
+	</div>
+  
+    
+      
+        <h2>2012</h2>
+        <h3>November</h3>
+      
+    
+  
+    
+    
+    
+    
+  
+    
+
+	<div class="post-title">
+	<p><a href="/2012/11/11/particle-filter-for-tracking">Particle filter for tracking</a>
+	
+	
+
+	
+	
+	</p>
+	</div>
+  
+    
+          
+        
+      
+    
+  
+    
+    
+    
+    
+  
+    
+
+	<div class="post-title">
+	<p><a href="/2012/11/01/localization">Localization</a>
+	
+	
+
+	
+	
+	</p>
+	</div>
+  
+    
+          
+        
+          <h3>July</h3>
+        
+      
+    
+  
+    
+    
+    
+    
+  
+    
+
+	<div class="post-title">
+	<p><a href="/2012/07/06/echo-state-networks">Echo State Networks</a>
+	
+	
+
+	
+	
+	</p>
+	</div>
+  
+    
+          
+        
+          <h3>May</h3>
+        
+      
+    
+  
+    
+    
+    
+    
+  
+    
+
+	<div class="post-title">
+	<p><a href="/2012/05/13/smartphone-add-ons">Smartphone add-ons</a>
+	
+	
+
+	
+	
+	</p>
+	</div>
+  
+    
+          
+        
+          <h3>April</h3>
+        
+      
+    
+  
+    
+    
+    
+    
+  
+    
+
+	<div class="post-title">
+	<p><a href="/2012/04/03/in-the-spotlight-linux">In the spotlight, Linux!</a>
+	
+	
+
+	
+	
+	</p>
+	</div>
+  
+    
+          
+        
+          <h3>March</h3>
+        
+      
+    
+  
+    
+    
+    
+    
+  
+    
+
+	<div class="post-title">
+	<p><a href="/2012/03/20/self-organisation-literature">Self-organisation Literature</a>
+	
+	
+
+	
+	
+	</p>
+	</div>
+  
+    
+          
+        
+          <h3>February</h3>
+        
+      
+    
+  
+    
+    
+    
+    
+  
+    
+
+	<div class="post-title">
+	<p><a href="/2012/02/27/the-renormalization-group">The renormalization group on networks, an introduction</a>
+	
+	
+
+	
+	
+	</p>
+	</div>
+  
+    
+          
+        
+      
+    
+  
+    
+    
+    
+    
+  
+    
+
+	<div class="post-title">
+	<p><a href="/2012/02/20/reprogrammable-remote-control-dongles">Reprogrammable Remote Control dongles</a>
+	
+	
+
+	
+	
+	</p>
+	</div>
+  
+    
+    
+  
+
+
+
+		</div>
+	</div>
+</div>
+
+<hr class="bottom-margin" />
+
+
+
+
+
+
+
+
+
+<div class="newsletter bottom">
+	<div class="wrapper">
+		<form action="//rocks.us10.list-manage.com/subscribe/post?u=d03baf337210e326a61dc14d5&id=a23d3e9ded" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
+			<label for="Email" class="newsletter__label hidden-label">Sign up to our mailing list</label>
+			<div class="input-group">
+				<input type="email" value="" placeholder="New things to learn and read!" name="EMAIL" id="Email" class="input-group-field newsletter__input" autocorrect="off" autocapitalize="off">
+				<span class="input-group-btn">
+					<button type="submit" class="btn newsletter__submit" name="subscribe" id="Subscribe">
+					<span class="newsletter__submit-text--large">I like!</span>
+					<span class="newsletter__submit-text--small">→</span>
+					</button>
+				</span>
+			</div>
+		</form>
+	</div>
+</div>
+
+
+
+<div class="footer">
+    <br />
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-10">
+                <div class="row">
+                    <div class="col-sm-4 text-center">
+                        <h3>Consumers</h3>
+                        <div style="display:inline-block;">
+                            <ul class="list-unstyled">
+                                
+      	    <li><a href="/" class="footer">Home</a></li>
+      	    <li><a href="/technology-consumer/" class="footer">Tech</a></li>
+      	    <li><a href="/blog/" class="footer">Blog</a></li>
+      	    <li><a href="/jobs/" class="footer">Jobs</a></li>
+      	    <li><a href="/team/" class="footer">Team</a></li>
+      	    <li><a href="/forum/" class="footer">Forum</a></li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 text-center">
+                        <h3>Business</h3>
+                        <div style="display:inline-block;">
+                            <ul class="list-unstyled">
+                                
+      	    <li><a href="/business/" class="footer">Use Cases</a></li>
+      	    <li><a href="/business/developers/" class="footer">Developers</a></li>
+      	    <li><a href="/business/data/" class="footer">Internet of Things</a></li>
+      	    <li><a href="/business/product-development/" class="footer">Product Development</a></li>
+      	    <li><a href="/infrastructure/" class="footer">Infrastructure</a></li>
+                                
+                            </ul>
+                        </div>
+                        <h3>News</h3>
+                        <div style="display:inline-block;">
+                            <ul class="list-unstyled">
+                                
+      	    <li><a href="/email-updates/" class="footer">Fun Newsletter!</a></li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 text-center">
+                        <h3>Order</h3>
+                        <div style="display:inline-block;">
+                            <ul class="list-unstyled text-left">
+                               <li>
+                                  <a class="footer" href="https://shop.crownstone.rocks?launch=en&ref=http://crownstone.rocks/en/blog/">
+                                     <i class="el el-shopping-cart footer"></i>
+                                     
+                                     Webshop
+                                     
+                                  </a>
+                               </li>
+                            </ul>
+                        </div>
+                        <h3>Contact</h3>
+                        <div style="display:inline-block;">
+                            <ul class="list-unstyled text-left">
+                                <li>
+                                    <script type="text/javascript">/*<![CDATA[*/var a=new Array(".rocks", "stone", "crown", "@", "am", "te");document.write("<a href='mailto:");for(i=a.length-1;i>=0;i--){document.write(a[i])}document.write("?subject=Get in contact' class='footer'><i class='el el-envelope footer'></i>Email us!</a>");/*]]>*/</script>
+                                    <noscript><i class="el el-envelope footer"></i>Email team@...</noscript>
+                                </li>
+                                <li>
+                                    <a href="https://www.facebook.com/crownstones/" target="_blank" class="footer">
+                                        <i class="el el-facebook footer"></i>Facebook
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/CrownstoneRocks" target="_blank" class="footer">
+                                        <i class="el el-twitter footer"></i>Twitter
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com/channel/UCru1PX6P1JyhsI-OEMXnBdg" target="_blank" class="footer">
+                                        <i class="el el-youtube footer"></i>Youtube
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.linkedin.com/company/crownstone" target="_blank" class="footer">
+                                        <i class="el el-linkedin footer"></i>Linkedin
+                                    </a>
+                                </li>
+                                <li>
+                                   <a href="https://crownstone.rocks/privacy-policy" class="footer">
+                                        <i class="el el-ok footer"></i>Privacy
+                                    </a>
+                                </li>
+                                <li>
+                                   <a href="https://crownstone.rocks/presskit" class="footer">
+                                        <i class="el el-idea footer"></i>Press
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-1"></div>
+        </div>
+        <br/>
+        <div class="row">
+            <div class="col-sm-12 text-center colofon">
+               <div class="accent">Crownstone</div>
+               <p>Stationsplein 45 d1.118</p>
+               <p>3013 AK Rotterdam, The Netherlands</p>
+               <p>0031103073955 / 010-3073955</p>
+               <br/>
+               <p>
+               This site uses external services. Cookies for the tawk.to chat box (<a href="https://www.tawk.to/privacy-policy/">privacy policy</a>) and the shopify webshop (<a href="https://www.shopify.com/legal/cookies">cookie policy</a>).
+               </p>
+            </div>
+        </div>
+    </div>
+    <br />
+</div>
+
+
+<script async defer src="https://cdn.simpleanalytics.io/hello.js"></script>
+<noscript><img src="https://api.simpleanalytics.io/hello.gif" alt=""></noscript>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-17146802-16', 'auto');
+  ga('set', 'allowAdFeatures', false);
+  ga('send', 'pageview');
+</script>
+
+
+
+<!-- in debug mode, Google Chrome complains about .map files, do not worry -->                    
+<script type="text/javascript" src="/assets/themes/flat/resources/jquery/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="/assets/themes/flat/resources/bootstrap/js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<!--[if gt IE 9]>
+<script type="text/javascript" src="/assets/themes/flat/resources/bootstrap/js/ie10-viewport-bug-workaround.js"></script>
+<![endif]-->
+
+
+<!-- Disable tawk on blog because preferred way of communication is disqus for blog posts. -->
+
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+   var tawk_loaded = false;
+
+   // when loading on demand, people have to click twice, after loading the iframe, click automatically
+   var tawk_autoclick = true;
+
+   // load tawk chat window only on demand
+   function load_tawk() {
+      if (!tawk_loaded) {
+         
+         document.getElementById("tawk-no-tracking-large").style.display = "none";
+         document.getElementById("tawk-no-tracking-small").style.display = "none";
+
+         var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+         (function(){
+            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+            s1.async=true;
+            s1.src='https://embed.tawk.to/565d82718c0c22d759259aee/default';
+            s1.charset='UTF-8';
+            s1.setAttribute('crossorigin','*');
+            s0.parentNode.insertBefore(s1,s0);
+            console.log("Embed tawk script");
+            if (tawk_autoclick == false) {
+               return;
+            }
+
+            setTimeout(
+               function() {
+                  var chat_widgets = document.querySelectorAll('[title="chat widget"]');
+                  var i;
+                  for (i = 0; i < chat_widgets.length; ++i) {
+                     var chat_frame = chat_widgets[i];
+                     console.log("widget", chat_frame);
+                     var box = chat_frame.contentDocument.getElementById("tawkchat-minified-box");
+                     if (box) {
+                        console.log("Touch minified box", box);
+                        var event = new Event('touchstart');
+                        box.dispatchEvent(event);
+                        event = new Event('touchend');
+                        box.dispatchEvent(event);
+                        return;
+                     }
+                     var wrapper = chat_frame.contentDocument.getElementById("tawkchat-minified-wrapper");
+                     if (wrapper) {
+                        console.log("Click minified wrapper", wrapper);
+                        wrapper.click();
+                        return;
+                     }
+                  }
+                  console.log("Done");
+               }, 1000);
+
+         })();
+
+         Tawk_API.onLoad = function(){
+            tawk_loaded = true;
+
+            console.log("Loaded tawk widget (only now)");
+            var pageStatus = Tawk_API.getStatus();
+
+            if (pageStatus === 'away') {
+               var s2 = document.getElementById("short-message");
+               s2.value = "Not there! Email us please!";
+            }
+
+            Tawk_API.maximize();
+         };         
+         
+      }
+   }
+</script>
+<!--End of Tawk.to Script-->
+
+<!-- Dummy block for lazy loading of Tawk.to script -->
+<div class="d-none d-sm-block">
+   <div class="tawk-dummy" id="tawk-no-tracking-large">
+      <div id="tawkchat-minified-wrapper" class="white ltr-direction">
+         <div id="tawkchat-minified-container" class="theme-background-color" style="border-radius: 8px 8px 0px 0px;">
+            <div id="tawkchat-status-middle">
+               <div id="tawkchat-status-text-container" class="theme-text-color">
+                  <div id="tawkchat-status-message">
+                     <span id="short-message" onclick="load_tawk();return false;">Chat with a human! :-) No bots!</span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+<div class="d-block d-sm-none"> 
+   <div class="tawk-dummy-small bottom round" id="tawk-no-tracking-small">
+      <div id="tawkchat-minified-box" style="transform: scale(1); transform-origin: left bottom 0px;">
+         <div id="tawkchat-minified-wrapper">
+            <div id="tawkchat-status-text-container" class="theme-background-color theme-text-color" onclick="load_tawk(); return false;">
+               <div id="tawkchat-status-icon" class="online">
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+
+
+</body>
+</html>
+

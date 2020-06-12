@@ -1,0 +1,490 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+
+    <meta name="description" content="Crownstone Alexa integration">
+
+    
+
+    
+
+    <meta name="keywords" content="crownstone, alexa, integration, smart home, voice technology">
+    
+    <meta name="author" content="Crownstone B.V.">
+    <link rel="icon" type="image/x-icon" href="https://crownstone.rocks/images/favicon.ico?">
+    <link rel="apple-touch-icon" href="https://crownstone.rocks/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://crownstone.rocks/images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://crownstone.rocks/images/apple-touch-icon-114x114.png">
+
+    <meta name="theme-color" content="#ff8400">
+    <meta name="msapplication-navbutton-color" content="#ff8400">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#ff8400">
+
+    <meta http-equiv="Content-Language" content="nl">
+<link rel="alternate" hreflang="en" href=" https://crownstone.rocks/integrations/alexa/"/>
+<link rel="alternate" hreflang="nl" href="https://crownstone.rocks/nl/integrations/alexa/"/>
+
+
+    <meta name="google-site-verification" content="qsSndPwnJ3H5zpj9z6ZvY-r4WnvSpMBe5QchxVbIWvw" />
+
+    
+    <title>Crownstone | Alexa</title>
+    <!-- Bootstrap as framework -->
+    <link href="/nl/assets/themes/flat/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/nl/assets/themes/flat/css/crownstone-global.css" rel="stylesheet"> 
+    <link href="/nl/assets/themes/flat/css/elusive-icons.min.css" rel="stylesheet"> 
+	<!-- Open graph social card -->
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Alexa">
+	<meta property="og:url" content="https://crownstone.rocks/integrations/alexa/">
+	<meta property="og:image" content="https://crownstone.rocks/images/crownstone-social-card.jpg">
+	<meta property="og:image:secure_url" content="https://crownstone.rocks/images/crownstone-social-card.jpg">
+	<meta property="og:description" content="Crownstone Alexa integration">
+	<meta property="og:site_name" content="Crownstone">
+	<!-- Open graph socal card for LinkedIn -->
+	<meta name="title" property="og:title" content="Alexa">
+	<meta name="image" property="og:image" content="https://crownstone.rocks/images/crownstone-social-card.jpg">
+	<meta name="description" property="og:description" content="Crownstone Alexa integration">
+	<!-- Twitter social card -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Alexa">
+	<meta name="twitter:description" content="Crownstone Alexa integration">
+	<meta name="twitter:image" content="https://crownstone.rocks/images/crownstone-social-card.jpg">
+	<meta name="twitter:image:width" content="240">
+	<meta name="twitter:image:height" content="240">
+    <!-- 
+    <link href="/nl/assets/themes/flat/css/elusive-webfont.css" rel="stylesheet"> 
+    -->
+    <!--[if lt IE 9]>
+        <script src="/assets/themes/flat/resources/respond/Respond.min.js"></script>
+    <![endif]-->
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <!--[if gt IE 9]>
+    <link href="./bootstrap/css/ie10-viewport-bug-workaround.css" rel="stylesheet"> 
+    <![endif]-->
+    <link href="/nl/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/nl/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+    
+
+    
+    
+    
+</head>
+
+<body>
+
+   <nav class="navbar navbar-light navbar-expand-lg">
+      <div class="container navContainer">
+         <img class="navbar-brand topLogo xs img-responsive" src="/images/apple-touch-icon-114x114.png" alt="">
+         <div class="crownstoneText d-block d-lg-none">Crownstone</div>
+
+         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarContents" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+
+         <div class="collapse navbar-collapse" id="navbarContents">
+            <ul class="navbar-nav">
+                                                                                                             
+				<li class="nav-item inactive "><a href="/nl/" class="nav-link">Welkom</a></li>
+				<li class="nav-item inactive "><a href="/nl/technology-consumer/" class="nav-link">Tech</a></li>
+				<li class="nav-item inactive "><a href="/nl/scenarios/" class="nav-link">Scenario's</a></li>
+				<li class="nav-item inactive "><a href="/nl/blog/" class="nav-link">Blog</a></li>
+				<li class="nav-item inactive "><a href="/nl/jobs/" class="nav-link">Banen</a></li>
+				<li class="nav-item inactive "><a href="/nl/team/" class="nav-link">Team</a></li>
+          	<li class="nav-item"><a href="/nl/search/" class="nav-link active"><i class="el el-search"></i></a></li>
+                       
+
+            </ul>
+            <ul class="navbar-nav mr-right">
+               
+<li class="nav-item">
+	
+	
+	<!-- note the space before nav-url, without it polyglot will relativize it: https://github.com/untra/polyglot -->
+	<a  href=" https://crownstone.rocks/integrations/alexa/" class="nav-link">en</a>
+</li>
+
+<li class="nav-item">
+	
+	
+	<!-- note the space before nav-url, without it polyglot will relativize it: https://github.com/untra/polyglot -->
+	<a style="font-weight: bold;" href=" https://crownstone.rocks/nl/integrations/alexa/" class="nav-link">nl</a>
+</li>
+
+<li class="nav-item accent">
+	<a href="https://shop.crownstone.rocks?launch=nl&ref=http://crownstone.rocks/nl/integrations/alexa/" class="nav-link">
+		
+		Winkel
+		
+		<i class="el el-shopping-cart"></i>
+	</a>
+</li>
+<li class="nav-item accent">
+	<a href="https://subscribe.crownstone.rocks/welcome?dest=smarthome&launch=nl&ref=http://crownstone.rocks/nl/integrations/alexa/" class="nav-link">
+		
+		Abonnement
+		
+		<i class="el el-person"></i>
+	</a>
+</li>
+
+            </ul>
+         </div>
+      </div>
+   </nav>
+
+
+<!-- background-image -->
+<div class="bannerContainer xl d-none d-xl-flex banner-alexa.jpg" style="background-image: url(/images/banners/banner-alexa.jpg)">
+   
+</div>
+<div class="bannerContainer lg d-none d-lg-flex d-xl-none banner-alexa.jpg" style="background-image: url(/images/banners/banner-alexa.jpg)">
+   
+</div>
+<div class="bannerContainer md d-none d-md-flex d-lg-none banner-alexa.jpg" style="background-image: url(/images/banners/banner-alexa.jpg)">
+   
+</div>
+<div class="bannerContainer sm d-none d-sm-flex d-md-none banner-alexa.jpg" style="background-image: url(/images/banners/banner-alexa.jpg)">
+   
+</div>
+<div class="bannerContainer xs d-flex d-sm-none banner-alexa.jpg" style="background-image: url(/images/banners/banner-alexa.jpg)">
+</div>
+<!-- end background-image -->
+
+
+
+
+
+
+
+
+
+<div class="container">
+
+
+<div class="row ">
+
+
+<div class="col-xs-12 col-sm-12 col-md-12">
+
+      <h1 id="header-alexa">Alexa</h1>
+
+      <p>Crownstones react to your presence and can turn on the lights when you enter the room automatically! Now you can overrule their behavior by Alexa voice commands. For example, tell Alexa to dim the lights when you want to watch a movie to create a nice atmosphere! You need physical Crownstones to make this happen. The Crownstones can be bought <a href="https://shop.crownstone.rocks/">online</a>.</p>
+
+      <p>It is easy to start to use Alexa if you have Crownstones:</p>
+
+      <ul>
+        <li>First, install the <a href="https://crownstone.rocks/nl/app/">Crownstone app</a> on your phone. The app runs on iPhone and Android devices.</li>
+        <li>Register yourself in the Crownstone app and remember your username and password.</li>
+        <li>Configure Crownstones in the app and give them nice names that are easy to pronounce.</li>
+        <li>In the Alexa app, enable the Crownstone skill and fill in the username and password you previously created for Crownstone.</li>
+        <li>The names given to the individual Crownstones in the Crownstone app will be the ones you can use with Alexa.</li>
+        <li>You can control the Crownstone devices now via voice commands.</li>
+        <li>You need a smartphone or tablet with the Crownstone app near the Crownstones.</li>
+        <li>If you want to control the Crownstones remotely, install the Crownstone app on a tablet or second smartphone and leave it at home. It now functions as a hub!</li>
+      </ul>
+
+      <p>Technically, this is what will happen when you say “Alexa, turn on the living room light”. The voice command is recognized by Alexa, it then goes to the Amazon servers, initiates a request to the Crownstone cloud, sends a push message via Apple/Google to your iPhone or Android device, which will then control the Crownstones.</p>
+
+      <p>If you don’t have Crownstones yet, you can get them at the <a href="https://shop.crownstone.rocks">webshop</a>. If you like to know more about this type of technology, subscribe to our in-depth <a href="https://crownstone.rocks/nl/email-updates/">smart home email updates</a>.</p>
+
+      <p>Enjoy your voice-controlled home!</p>
+
+    </div><!-- col -->
+
+</div><!-- row -->
+
+</div>
+<!-- container -->
+
+
+
+
+
+
+
+
+
+<div class="newsletter bottom">
+	<div class="wrapper">
+		<form action="//rocks.us10.list-manage.com/subscribe/post?u=d03baf337210e326a61dc14d5&id=a23d3e9ded" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
+			<label for="Email" class="newsletter__label hidden-label">Sign up to our mailing list</label>
+			<div class="input-group">
+				<input type="email" value="" placeholder="New things to learn and read!" name="EMAIL" id="Email" class="input-group-field newsletter__input" autocorrect="off" autocapitalize="off">
+				<span class="input-group-btn">
+					<button type="submit" class="btn newsletter__submit" name="subscribe" id="Subscribe">
+					<span class="newsletter__submit-text--large">I like!</span>
+					<span class="newsletter__submit-text--small">→</span>
+					</button>
+				</span>
+			</div>
+		</form>
+	</div>
+</div>
+
+
+
+<div class="footer">
+    <br />
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-10">
+                <div class="row">
+                    <div class="col-sm-4 text-center">
+                        <h3>Consumers</h3>
+                        <div style="display:inline-block;">
+                            <ul class="list-unstyled">
+                                
+      	    <li><a href="/nl/" class="footer">Welkom</a></li>
+      	    <li><a href="/nl/technology-consumer/" class="footer">Tech</a></li>
+      	    <li><a href="/nl/blog/" class="footer">Blog</a></li>
+      	    <li><a href="/nl/jobs/" class="footer">Banen</a></li>
+      	    <li><a href="/nl/team/" class="footer">Team</a></li>
+      	    <li><a href="/nl/forum/" class="footer">Forum</a></li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 text-center">
+                        <h3>Business</h3>
+                        <div style="display:inline-block;">
+                            <ul class="list-unstyled">
+                                
+      	    <li><a href="/nl/business/" class="footer">Use Cases</a></li>
+      	    <li><a href="/nl/business/developers/" class="footer">Developers</a></li>
+      	    <li><a href="/nl/business/data/" class="footer">Internet of Things</a></li>
+      	    <li><a href="/nl/business/product-development/" class="footer">Product Development</a></li>
+      	    <li><a href="/nl/infrastructure/" class="footer">Infrastructure</a></li>
+                                
+                            </ul>
+                        </div>
+                        <h3>News</h3>
+                        <div style="display:inline-block;">
+                            <ul class="list-unstyled">
+                                
+      	    <li><a href="/nl/email-updates/" class="footer">Fun Newsletter!</a></li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 text-center">
+                        <h3>Order</h3>
+                        <div style="display:inline-block;">
+                            <ul class="list-unstyled text-left">
+                               <li>
+                                  <a class="footer" href="https://shop.crownstone.rocks?launch=nl&ref=http://crownstone.rocks/nl/integrations/alexa/">
+                                     <i class="el el-shopping-cart footer"></i>
+                                     
+                                     Webwinkel
+                                     
+                                  </a>
+                               </li>
+                            </ul>
+                        </div>
+                        <h3>Contact</h3>
+                        <div style="display:inline-block;">
+                            <ul class="list-unstyled text-left">
+                                <li>
+                                    <script type="text/javascript">/*<![CDATA[*/var a=new Array(".rocks", "stone", "crown", "@", "am", "te");document.write("<a href='mailto:");for(i=a.length-1;i>=0;i--){document.write(a[i])}document.write("?subject=Get in contact' class='footer'><i class='el el-envelope footer'></i>Email us!</a>");/*]]>*/</script>
+                                    <noscript><i class="el el-envelope footer"></i>Email team@...</noscript>
+                                </li>
+                                <li>
+                                    <a href="https://www.facebook.com/crownstones/" target="_blank" class="footer">
+                                        <i class="el el-facebook footer"></i>Facebook
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/CrownstoneRocks" target="_blank" class="footer">
+                                        <i class="el el-twitter footer"></i>Twitter
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com/channel/UCru1PX6P1JyhsI-OEMXnBdg" target="_blank" class="footer">
+                                        <i class="el el-youtube footer"></i>Youtube
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.linkedin.com/company/crownstone" target="_blank" class="footer">
+                                        <i class="el el-linkedin footer"></i>Linkedin
+                                    </a>
+                                </li>
+                                <li>
+                                   <a href="https://crownstone.rocks/nl/privacy-policy" class="footer">
+                                        <i class="el el-ok footer"></i>Privacy
+                                    </a>
+                                </li>
+                                <li>
+                                   <a href="https://crownstone.rocks/nl/presskit" class="footer">
+                                        <i class="el el-idea footer"></i>Press
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-1"></div>
+        </div>
+        <br/>
+        <div class="row">
+            <div class="col-sm-12 text-center colofon">
+               <div class="accent">Crownstone</div>
+               <p>Stationsplein 45 d1.118</p>
+               <p>3013 AK Rotterdam, The Netherlands</p>
+               <p>0031103073955 / 010-3073955</p>
+               <br/>
+               <p>
+               This site uses external services. Cookies for the tawk.to chat box (<a href="https://www.tawk.to/privacy-policy/">privacy policy</a>) and the shopify webshop (<a href="https://www.shopify.com/legal/cookies">cookie policy</a>).
+               </p>
+            </div>
+        </div>
+    </div>
+    <br />
+</div>
+
+
+<script async defer src="https://cdn.simpleanalytics.io/hello.js"></script>
+<noscript><img src="https://api.simpleanalytics.io/hello.gif" alt=""></noscript>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-17146802-16', 'auto');
+  ga('set', 'allowAdFeatures', false);
+  ga('send', 'pageview');
+</script>
+
+
+
+<!-- in debug mode, Google Chrome complains about .map files, do not worry -->                    
+<script type="text/javascript" src="/assets/themes/flat/resources/jquery/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="/assets/themes/flat/resources/bootstrap/js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<!--[if gt IE 9]>
+<script type="text/javascript" src="/assets/themes/flat/resources/bootstrap/js/ie10-viewport-bug-workaround.js"></script>
+<![endif]-->
+
+
+<!-- Disable tawk on blog because preferred way of communication is disqus for blog posts. -->
+
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+   var tawk_loaded = false;
+
+   // when loading on demand, people have to click twice, after loading the iframe, click automatically
+   var tawk_autoclick = true;
+
+   // load tawk chat window only on demand
+   function load_tawk() {
+      if (!tawk_loaded) {
+         
+         document.getElementById("tawk-no-tracking-large").style.display = "none";
+         document.getElementById("tawk-no-tracking-small").style.display = "none";
+
+         var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+         (function(){
+            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+            s1.async=true;
+            s1.src='https://embed.tawk.to/565d82718c0c22d759259aee/default';
+            s1.charset='UTF-8';
+            s1.setAttribute('crossorigin','*');
+            s0.parentNode.insertBefore(s1,s0);
+            console.log("Embed tawk script");
+            if (tawk_autoclick == false) {
+               return;
+            }
+
+            setTimeout(
+               function() {
+                  var chat_widgets = document.querySelectorAll('[title="chat widget"]');
+                  var i;
+                  for (i = 0; i < chat_widgets.length; ++i) {
+                     var chat_frame = chat_widgets[i];
+                     console.log("widget", chat_frame);
+                     var box = chat_frame.contentDocument.getElementById("tawkchat-minified-box");
+                     if (box) {
+                        console.log("Touch minified box", box);
+                        var event = new Event('touchstart');
+                        box.dispatchEvent(event);
+                        event = new Event('touchend');
+                        box.dispatchEvent(event);
+                        return;
+                     }
+                     var wrapper = chat_frame.contentDocument.getElementById("tawkchat-minified-wrapper");
+                     if (wrapper) {
+                        console.log("Click minified wrapper", wrapper);
+                        wrapper.click();
+                        return;
+                     }
+                  }
+                  console.log("Done");
+               }, 1000);
+
+         })();
+
+         Tawk_API.onLoad = function(){
+            tawk_loaded = true;
+
+            console.log("Loaded tawk widget (only now)");
+            var pageStatus = Tawk_API.getStatus();
+
+            if (pageStatus === 'away') {
+               var s2 = document.getElementById("short-message");
+               s2.value = "Not there! Email us please!";
+            }
+
+            Tawk_API.maximize();
+         };         
+         
+      }
+   }
+</script>
+<!--End of Tawk.to Script-->
+
+<!-- Dummy block for lazy loading of Tawk.to script -->
+<div class="d-none d-sm-block">
+   <div class="tawk-dummy" id="tawk-no-tracking-large">
+      <div id="tawkchat-minified-wrapper" class="white ltr-direction">
+         <div id="tawkchat-minified-container" class="theme-background-color" style="border-radius: 8px 8px 0px 0px;">
+            <div id="tawkchat-status-middle">
+               <div id="tawkchat-status-text-container" class="theme-text-color">
+                  <div id="tawkchat-status-message">
+                     <span id="short-message" onclick="load_tawk();return false;">Chat with a human! :-) No bots!</span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+<div class="d-block d-sm-none"> 
+   <div class="tawk-dummy-small bottom round" id="tawk-no-tracking-small">
+      <div id="tawkchat-minified-box" style="transform: scale(1); transform-origin: left bottom 0px;">
+         <div id="tawkchat-minified-wrapper">
+            <div id="tawkchat-status-text-container" class="theme-background-color theme-text-color" onclick="load_tawk(); return false;">
+               <div id="tawkchat-status-icon" class="online">
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+
+
+</body>
+</html>
+

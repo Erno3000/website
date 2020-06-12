@@ -1,0 +1,581 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+
+    <meta name="description" content="The different forms of indoor localization.">
+
+    
+
+    
+
+    <meta name="keywords" content="indoor localization, presence sensing, proximity, ranging, iBeacon">
+    
+    <meta name="author" content="Crownstone B.V.">
+    <link rel="icon" type="image/x-icon" href="https://crownstone.rocks/images/favicon.ico?">
+    <link rel="apple-touch-icon" href="https://crownstone.rocks/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://crownstone.rocks/images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://crownstone.rocks/images/apple-touch-icon-114x114.png">
+
+    <meta name="theme-color" content="#ff8400">
+    <meta name="msapplication-navbutton-color" content="#ff8400">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#ff8400">
+
+    <meta http-equiv="Content-Language" content="en">
+<link rel="alternate" hreflang="en" href=" https://crownstone.rocks/indoor-localization/"/>
+<link rel="alternate" hreflang="nl" href="https://crownstone.rocks/nl/indoor-localization/"/>
+
+
+    <meta name="google-site-verification" content="qsSndPwnJ3H5zpj9z6ZvY-r4WnvSpMBe5QchxVbIWvw" />
+
+    
+    <title>Crownstone | Indoor Localization</title>
+    <!-- Bootstrap as framework -->
+    <link href="/assets/themes/flat/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/themes/flat/css/crownstone-global.css" rel="stylesheet"> 
+    <link href="/assets/themes/flat/css/elusive-icons.min.css" rel="stylesheet"> 
+	<!-- Open graph social card -->
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Indoor Localization">
+	<meta property="og:url" content="https://crownstone.rocks/indoor-localization/">
+	<meta property="og:image" content="https://crownstone.rocks/images/crownstone-social-card.jpg">
+	<meta property="og:image:secure_url" content="https://crownstone.rocks/images/crownstone-social-card.jpg">
+	<meta property="og:description" content="The different forms of indoor localization.">
+	<meta property="og:site_name" content="Crownstone">
+	<!-- Open graph socal card for LinkedIn -->
+	<meta name="title" property="og:title" content="Indoor Localization">
+	<meta name="image" property="og:image" content="https://crownstone.rocks/images/crownstone-social-card.jpg">
+	<meta name="description" property="og:description" content="The different forms of indoor localization.">
+	<!-- Twitter social card -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Indoor Localization">
+	<meta name="twitter:description" content="The different forms of indoor localization.">
+	<meta name="twitter:image" content="https://crownstone.rocks/images/crownstone-social-card.jpg">
+	<meta name="twitter:image:width" content="240">
+	<meta name="twitter:image:height" content="240">
+    <!-- 
+    <link href="/assets/themes/flat/css/elusive-webfont.css" rel="stylesheet"> 
+    -->
+    <!--[if lt IE 9]>
+        <script src="/assets/themes/flat/resources/respond/Respond.min.js"></script>
+    <![endif]-->
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <!--[if gt IE 9]>
+    <link href="./bootstrap/css/ie10-viewport-bug-workaround.css" rel="stylesheet"> 
+    <![endif]-->
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+    
+
+    
+    
+    
+</head>
+
+<body>
+
+   <nav class="navbar navbar-light navbar-expand-lg">
+      <div class="container navContainer">
+         <img class="navbar-brand topLogo xs img-responsive" src="/images/apple-touch-icon-114x114.png" alt="">
+         <div class="crownstoneText d-block d-lg-none">Crownstone</div>
+
+         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarContents" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+
+         <div class="collapse navbar-collapse" id="navbarContents">
+            <ul class="navbar-nav">
+                                                                                                             
+				<li class="nav-item inactive "><a href="/" class="nav-link">Home</a></li>
+				<li class="nav-item inactive "><a href="/technology-consumer/" class="nav-link">Tech</a></li>
+				<li class="nav-item inactive "><a href="/scenarios/" class="nav-link">Scenarios</a></li>
+				<li class="nav-item inactive "><a href="/blog/" class="nav-link">Blog</a></li>
+				<li class="nav-item inactive "><a href="/jobs/" class="nav-link">Jobs</a></li>
+				<li class="nav-item inactive "><a href="/team/" class="nav-link">Team</a></li>
+          	<li class="nav-item"><a href="/search/" class="nav-link active"><i class="el el-search"></i></a></li>
+                       
+
+            </ul>
+            <ul class="navbar-nav mr-right">
+               
+<li class="nav-item">
+	
+	
+	<!-- note the space before nav-url, without it polyglot will relativize it: https://github.com/untra/polyglot -->
+	<a style="font-weight: bold;" href=" https://crownstone.rocks/indoor-localization/" class="nav-link">en</a>
+</li>
+
+<li class="nav-item">
+	
+	
+	<!-- note the space before nav-url, without it polyglot will relativize it: https://github.com/untra/polyglot -->
+	<a  href=" https://crownstone.rocks/nl/indoor-localization/" class="nav-link">nl</a>
+</li>
+
+<li class="nav-item accent">
+	<a href="https://shop.crownstone.rocks?launch=en&ref=http://crownstone.rocks/en/indoor-localization/" class="nav-link">
+		
+		Shop
+		
+		<i class="el el-shopping-cart"></i>
+	</a>
+</li>
+<li class="nav-item accent">
+	<a href="https://subscribe.crownstone.rocks/welcome?dest=smarthome&launch=en&ref=http://crownstone.rocks/en/indoor-localization/" class="nav-link">
+		
+		Subscription
+		
+		<i class="el el-person"></i>
+	</a>
+</li>
+
+            </ul>
+         </div>
+      </div>
+   </nav>
+
+
+
+
+
+
+<!-- markdown wrapper -->
+<div class="container">
+<div class="row">
+<div class="col">
+<!-- markdown wrapper -->
+
+
+
+
+
+<h1 id="header-indoor-localization">Indoor Localization</h1>
+
+<p>There are many ways in which localization can be done and we would like to give an overview that would quickly guide you through the pros and cons of each method.</p>
+
+<h2 id="header-proximity">Proximity</h2>
+
+<p>Most iBeacon solutions run software on a smartphone that detects if the user is in proximity of the beacon. There is no indoor localization involved.</p>
+
+<p>Advantages:</p>
+
+<ul>
+  <li>Very little software development.</li>
+</ul>
+
+<p>Disadvantages:</p>
+
+<ul>
+  <li>The user has to carry a smartphone with an app.</li>
+  <li>Only knowledge about the proximity of a user is known to the app.</li>
+</ul>
+
+<h2 id="header-fingerprinting">Fingerprinting</h2>
+
+<p>In the Crownstone at home setting, an AI (artificial intelligence) resides on your phone. Currently, this entity is not particularly intelligent, but it is meant to become smarter over time. One of the components of this AI is a so-called classifier. The AI initiates the user to walk around in a predefined (labeled) room. The AI collects Bluetooth Low Energy signal strengths (RSSI values). If a user covers the room while this is done the AI has collected a set of those RSSI values for a wide diversity of locations within the room. Each item in this set belongs to the same label “living room”. The classifier has as task to pair a set of RSSI values with the proper room label.</p>
+
+<p>Advantages:</p>
+
+<ul>
+  <li>Works already with only a few Crownstones (four and up)</li>
+  <li>No metric information required (no need to measure distances between Crownstones)</li>
+  <li>Accuracy can be addressed by the user. People can retrain if they move furniture, do remodeling, etc.</li>
+  <li>Room-level accuracy can be obtained (at around 1.5 meters).</li>
+</ul>
+
+<p>Disadvantages:</p>
+
+<ul>
+  <li>The user has to carry a smartphone with an app.</li>
+  <li>RSSI values are different per phone model and per individual phone (smartphone covers, cases, etc. slightly disturb BLE signals). Part of this might be solved by so-called <em>transfer learning</em>, in which an AI on one phone learns from an AI on another phone. However, that is a non-trivial problem.</li>
+  <li>In daily operation the smartphone has to listen to RSSI values all the time (in the background). This can be done, although it requires background location permissions achieve continuous listening on iOS devices. However, regarding battery life it needs to be taken into account that listening costs energy, even if it is not much.</li>
+</ul>
+
+<p>Things to consider:</p>
+
+<ul>
+  <li>Messages have to be sent as unconnectable iBeacon messages to be received by iPhones per iBeacon specification. This means that smart home devices such as Crownstones need to toggle between connectable BLE messages and unconnectable iBeacon messages.</li>
+</ul>
+
+<h2 id="header-region-monitoring">Region monitoring</h2>
+
+<p>There is a particular option in iOS available that allows an app developer to only have information flowing to the app when a user enters or exists a particular region. The data in an iBeacon message contains a proximity UUID, major, and minor number. When a particular proximity UUID is registered, the app can monitor for it. It cannot scan all available iBeacon broadcasts and then pick on to listen to. The software framework in iOS, called Core Location, limits the number of regions to 20. An app is not able to simultaneously monitor more than 20 regions. This means that if every room gets its own UUID or major/minor and is defined as an individual region, it is only possible to have 20 rooms in total for a particular user.</p>
+
+<p>There are several ways to circumvent this:</p>
+
+<ul>
+  <li>Use the <strong>four-color theorem</strong>. Each beacon can be assigned a different region compared to its neighbours as long as their are four distinct regions. With twenty regions, this should be enough. However, this also requires little overlap between these regions and the beacons should transmit only weakly. This is a conflict, because after a region enter event it is still necessary to do some ranging (using the positions of multiple beacons) to improve the localization. If there are only a few beacons visible during ranging, the accuracy is dramatically reduced.</li>
+  <li>A <strong>dynamic update</strong> of the major/minor list. On the smartphone continuously adjust the 20 major/minor numbers to reflect the neighbours of a particular region the user is residing. Note, this does not adjust the beacons themselves (which would not work with multiple users). It only adjust the list-to-look for on the phone. This will work for most cases, except if a user can enter for example more than 20 different buildings. In that case additional information, for example Wifi or GPS is required to update the list.</li>
+</ul>
+
+<p>Advantages:</p>
+
+<ul>
+  <li>Potentially less battery consumption than with fingerprinting.</li>
+</ul>
+
+<p>Disadvantages:</p>
+
+<ul>
+  <li>The user has to carry a smartphone with an app.</li>
+  <li>Assuming no additional ranging, only an accuracy defined by typical BLE transmission distance is available. This can deviate from 20 to 70 meter. This is a level of accuracy that defines a building or a wing of a building, but not much more.</li>
+  <li>Circumventing the 20 region limit is hard in practice.</li>
+  <li>There are all kind of edge cases and noise often screws up the application. Region enter and exit events are easily missed.</li>
+  <li>When telling an app to monitor for certain iBeacon region while the app is in the background, it will not always keep the app active in the background.</li>
+</ul>
+
+<h2 id="header-in-network-tracking">In-network tracking</h2>
+
+<p>There is no reason to only rely on the capabilities of smartphones. It is possible to use active beacons that scan for BLE devices. Smart watches, fitness bands, etc. all emit BLE signals that can be picked up by active beacons. To perform proximity based solutions the data has to be communicated through some kind of mesh from the active beacons to a hub and to the internet. To perform indoor localization information from multiple active beacons has to be merged either in the network or on the internet. In-network tracking henceforth is nowadays most often only proximity based.</p>
+
+<p>Advantages:</p>
+
+<ul>
+  <li>The user can wear a BLE wearable rather than a smartphone.</li>
+</ul>
+
+<p>Disadvantages:</p>
+
+<ul>
+  <li>A BLE wearable might not always transmit BLE messages. For example when it is connected to a smartphone it might stop sending regular messages. This means that each BLE wearable has to be checked upon its compatibility.</li>
+  <li>The information needs to go through a BLE mesh network, a gateway, and the internet. This means that this information has high latency. In contrast, if the information is only used locally, the latency can be very low. For example, a Crownstone can react extremely fast on incoming iBeacon messages (even faster than normal because no connection process is required).</li>
+  <li>A BLE wearable might not be able to transmit a BLE message that is identifiable. This also requires a check on compatibility. If there is full control encrypted BLE messages can be send. If there is no complete control, it might be possible to send identifiable BLE messages, but they won’t be encrypted (which means other entities might be able to track as well if they build BLE scanners).</li>
+</ul>
+
+<h2 id="header-trilateration">Trilateration</h2>
+
+<p>By creating a single map with the positions of all beacons on that map, it is possible to perform trilateration. This is often called triangulation, however trilateration uses the BLE received signal strengths, not angles (and Pythagoras).</p>
+
+<p>Advantages:</p>
+
+<ul>
+  <li>Quite accurate positioning possible.</li>
+  <li>Trilateration is a very well known problem with many off-the-shelf solutions.</li>
+</ul>
+
+<p>Disadvantages:</p>
+
+<ul>
+  <li>All locations of beacons have to be put on an accurate (metric) map.</li>
+  <li>If beacons change position this has to be noted and adjusted on the map.</li>
+  <li>The app on the phone has to get a map from a building before being able to perform positioning.</li>
+  <li>The metric positions (indoor GPS coordinates) have to be mapped to semantic labels (e.g. meeting room or hallway).</li>
+</ul>
+
+<h2 id="header-simultaneous-localization-and-mapping">Simultaneous localization and mapping</h2>
+
+<p>Simultaneous localization and mapping is a technique from robotics in which - in this case - the map (locations of beacons) are automatically discovered by the smartphones localizing themselves. This is an incrementally improving method. First the locations of the beacons are wrong. However, by knowing things about the movement of smartphones (e.g. the smoothness of a trajectory), the system learns which beacons are close to each other and which are not.</p>
+
+<p>Advantages:</p>
+
+<ul>
+  <li>Quite accurate positoning possible.</li>
+  <li>No need to put the beacons on a map.</li>
+</ul>
+
+<p>Disadvantages:</p>
+
+<ul>
+  <li>Difficult algorithms with a lot of corner cases.</li>
+  <li>The metric positions (indoor GPS coordinates) have to be mapped to semantic labels (e.g. meeting room or hallway).</li>
+</ul>
+
+<h1 id="header-other-points">Other points</h1>
+
+<p>There are a lot of other things that can improve the positioning or the user experience. It is possible for example to use odometry information (movement or lack of movement of a smartphone) to improve the positioning accuracy (both in resolution and in latency). The use of accelerometer, gyroscope data however also has an influence on battery life. Besides that there are additional sensors that can be used on a smartphone. A camera is an obvious possibility. Less well-known is the possibility to use small deviations in a smartphone’s compass. Those small deviations are typical for metal in the environment and thus typical for particular locations within a building. At Crownstone we will always use whatever becomes available to provide state-of-the-art localization results.</p>
+
+
+
+
+
+
+<!-- markdown wrapper -->
+</div><!-- container -->
+</div><!-- row -->
+</div><!-- col -->
+<!-- markdown wrapper -->
+
+
+
+<div class="newsletter bottom">
+	<div class="wrapper">
+		<form action="//rocks.us10.list-manage.com/subscribe/post?u=d03baf337210e326a61dc14d5&id=a23d3e9ded" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
+			<label for="Email" class="newsletter__label hidden-label">Sign up to our mailing list</label>
+			<div class="input-group">
+				<input type="email" value="" placeholder="New things to learn and read!" name="EMAIL" id="Email" class="input-group-field newsletter__input" autocorrect="off" autocapitalize="off">
+				<span class="input-group-btn">
+					<button type="submit" class="btn newsletter__submit" name="subscribe" id="Subscribe">
+					<span class="newsletter__submit-text--large">I like!</span>
+					<span class="newsletter__submit-text--small">→</span>
+					</button>
+				</span>
+			</div>
+		</form>
+	</div>
+</div>
+
+
+
+<div class="footer">
+    <br />
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-10">
+                <div class="row">
+                    <div class="col-sm-4 text-center">
+                        <h3>Consumers</h3>
+                        <div style="display:inline-block;">
+                            <ul class="list-unstyled">
+                                
+      	    <li><a href="/" class="footer">Home</a></li>
+      	    <li><a href="/technology-consumer/" class="footer">Tech</a></li>
+      	    <li><a href="/blog/" class="footer">Blog</a></li>
+      	    <li><a href="/jobs/" class="footer">Jobs</a></li>
+      	    <li><a href="/team/" class="footer">Team</a></li>
+      	    <li><a href="/forum/" class="footer">Forum</a></li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 text-center">
+                        <h3>Business</h3>
+                        <div style="display:inline-block;">
+                            <ul class="list-unstyled">
+                                
+      	    <li><a href="/business/" class="footer">Use Cases</a></li>
+      	    <li><a href="/business/developers/" class="footer">Developers</a></li>
+      	    <li><a href="/business/data/" class="footer">Internet of Things</a></li>
+      	    <li><a href="/business/product-development/" class="footer">Product Development</a></li>
+      	    <li><a href="/infrastructure/" class="footer">Infrastructure</a></li>
+                                
+                            </ul>
+                        </div>
+                        <h3>News</h3>
+                        <div style="display:inline-block;">
+                            <ul class="list-unstyled">
+                                
+      	    <li><a href="/email-updates/" class="footer">Fun Newsletter!</a></li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 text-center">
+                        <h3>Order</h3>
+                        <div style="display:inline-block;">
+                            <ul class="list-unstyled text-left">
+                               <li>
+                                  <a class="footer" href="https://shop.crownstone.rocks?launch=en&ref=http://crownstone.rocks/en/indoor-localization/">
+                                     <i class="el el-shopping-cart footer"></i>
+                                     
+                                     Webshop
+                                     
+                                  </a>
+                               </li>
+                            </ul>
+                        </div>
+                        <h3>Contact</h3>
+                        <div style="display:inline-block;">
+                            <ul class="list-unstyled text-left">
+                                <li>
+                                    <script type="text/javascript">/*<![CDATA[*/var a=new Array(".rocks", "stone", "crown", "@", "am", "te");document.write("<a href='mailto:");for(i=a.length-1;i>=0;i--){document.write(a[i])}document.write("?subject=Get in contact' class='footer'><i class='el el-envelope footer'></i>Email us!</a>");/*]]>*/</script>
+                                    <noscript><i class="el el-envelope footer"></i>Email team@...</noscript>
+                                </li>
+                                <li>
+                                    <a href="https://www.facebook.com/crownstones/" target="_blank" class="footer">
+                                        <i class="el el-facebook footer"></i>Facebook
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/CrownstoneRocks" target="_blank" class="footer">
+                                        <i class="el el-twitter footer"></i>Twitter
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com/channel/UCru1PX6P1JyhsI-OEMXnBdg" target="_blank" class="footer">
+                                        <i class="el el-youtube footer"></i>Youtube
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.linkedin.com/company/crownstone" target="_blank" class="footer">
+                                        <i class="el el-linkedin footer"></i>Linkedin
+                                    </a>
+                                </li>
+                                <li>
+                                   <a href="https://crownstone.rocks/privacy-policy" class="footer">
+                                        <i class="el el-ok footer"></i>Privacy
+                                    </a>
+                                </li>
+                                <li>
+                                   <a href="https://crownstone.rocks/presskit" class="footer">
+                                        <i class="el el-idea footer"></i>Press
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-1"></div>
+        </div>
+        <br/>
+        <div class="row">
+            <div class="col-sm-12 text-center colofon">
+               <div class="accent">Crownstone</div>
+               <p>Stationsplein 45 d1.118</p>
+               <p>3013 AK Rotterdam, The Netherlands</p>
+               <p>0031103073955 / 010-3073955</p>
+               <br/>
+               <p>
+               This site uses external services. Cookies for the tawk.to chat box (<a href="https://www.tawk.to/privacy-policy/">privacy policy</a>) and the shopify webshop (<a href="https://www.shopify.com/legal/cookies">cookie policy</a>).
+               </p>
+            </div>
+        </div>
+    </div>
+    <br />
+</div>
+
+
+<script async defer src="https://cdn.simpleanalytics.io/hello.js"></script>
+<noscript><img src="https://api.simpleanalytics.io/hello.gif" alt=""></noscript>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-17146802-16', 'auto');
+  ga('set', 'allowAdFeatures', false);
+  ga('send', 'pageview');
+</script>
+
+
+
+<!-- in debug mode, Google Chrome complains about .map files, do not worry -->                    
+<script type="text/javascript" src="/assets/themes/flat/resources/jquery/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="/assets/themes/flat/resources/bootstrap/js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<!--[if gt IE 9]>
+<script type="text/javascript" src="/assets/themes/flat/resources/bootstrap/js/ie10-viewport-bug-workaround.js"></script>
+<![endif]-->
+
+
+<!-- Disable tawk on blog because preferred way of communication is disqus for blog posts. -->
+
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+   var tawk_loaded = false;
+
+   // when loading on demand, people have to click twice, after loading the iframe, click automatically
+   var tawk_autoclick = true;
+
+   // load tawk chat window only on demand
+   function load_tawk() {
+      if (!tawk_loaded) {
+         
+         document.getElementById("tawk-no-tracking-large").style.display = "none";
+         document.getElementById("tawk-no-tracking-small").style.display = "none";
+
+         var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+         (function(){
+            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+            s1.async=true;
+            s1.src='https://embed.tawk.to/565d82718c0c22d759259aee/default';
+            s1.charset='UTF-8';
+            s1.setAttribute('crossorigin','*');
+            s0.parentNode.insertBefore(s1,s0);
+            console.log("Embed tawk script");
+            if (tawk_autoclick == false) {
+               return;
+            }
+
+            setTimeout(
+               function() {
+                  var chat_widgets = document.querySelectorAll('[title="chat widget"]');
+                  var i;
+                  for (i = 0; i < chat_widgets.length; ++i) {
+                     var chat_frame = chat_widgets[i];
+                     console.log("widget", chat_frame);
+                     var box = chat_frame.contentDocument.getElementById("tawkchat-minified-box");
+                     if (box) {
+                        console.log("Touch minified box", box);
+                        var event = new Event('touchstart');
+                        box.dispatchEvent(event);
+                        event = new Event('touchend');
+                        box.dispatchEvent(event);
+                        return;
+                     }
+                     var wrapper = chat_frame.contentDocument.getElementById("tawkchat-minified-wrapper");
+                     if (wrapper) {
+                        console.log("Click minified wrapper", wrapper);
+                        wrapper.click();
+                        return;
+                     }
+                  }
+                  console.log("Done");
+               }, 1000);
+
+         })();
+
+         Tawk_API.onLoad = function(){
+            tawk_loaded = true;
+
+            console.log("Loaded tawk widget (only now)");
+            var pageStatus = Tawk_API.getStatus();
+
+            if (pageStatus === 'away') {
+               var s2 = document.getElementById("short-message");
+               s2.value = "Not there! Email us please!";
+            }
+
+            Tawk_API.maximize();
+         };         
+         
+      }
+   }
+</script>
+<!--End of Tawk.to Script-->
+
+<!-- Dummy block for lazy loading of Tawk.to script -->
+<div class="d-none d-sm-block">
+   <div class="tawk-dummy" id="tawk-no-tracking-large">
+      <div id="tawkchat-minified-wrapper" class="white ltr-direction">
+         <div id="tawkchat-minified-container" class="theme-background-color" style="border-radius: 8px 8px 0px 0px;">
+            <div id="tawkchat-status-middle">
+               <div id="tawkchat-status-text-container" class="theme-text-color">
+                  <div id="tawkchat-status-message">
+                     <span id="short-message" onclick="load_tawk();return false;">Chat with a human! :-) No bots!</span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+<div class="d-block d-sm-none"> 
+   <div class="tawk-dummy-small bottom round" id="tawk-no-tracking-small">
+      <div id="tawkchat-minified-box" style="transform: scale(1); transform-origin: left bottom 0px;">
+         <div id="tawkchat-minified-wrapper">
+            <div id="tawkchat-status-text-container" class="theme-background-color theme-text-color" onclick="load_tawk(); return false;">
+               <div id="tawkchat-status-icon" class="online">
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+
+
+</body>
+</html>
+
